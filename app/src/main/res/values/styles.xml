@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="login_button_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/orange_background_button</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/_15sdp</item>
+    </style>
+
+    <style name="login_editText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_40sdp</item>
+        <item name="android:background">@drawable/challengic_rect_edittext</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:paddingStart">@dimen/_10sdp</item>
+        <item name="android:textColorHint">#AAAAAA</item>
+    </style>
+</resources>
