@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    tools:context=".design.signup.SignUpActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_15sdp">
+
+        <ImageView
+            android:id="@+id/ivSignUpLogo"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:src="@drawable/login_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSignUpHelloHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/hello"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_40sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivSignUpLogo" />
+
+        <TextView
+            android:id="@+id/tvSignUpHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/sign_up"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_25sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSignUpHelloHeading" />
+
+        <TextView
+            android:id="@+id/tvSignUpContinueGoogle"
+            style="@style/login_button_style"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:text="@string/continue_with_google"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSignUpHeading" />
+
+
+        <TextView
+            android:id="@+id/tvSignUpContinueFacebook"
+            style="@style/login_button_style"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/continue_with_facebook"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSignUpContinueGoogle" />
+
+
+        <TextView
+            android:id="@+id/tvSignUpHeadingOr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/or"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSignUpContinueFacebook" />
+
+
+        <EditText
+            android:id="@+id/etDOB"
+            style="@style/login_editText"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:hint="@string/enter_your_name"
+            android:inputType="textEmailAddress"
+            android:maxLength="40"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSignUpHeadingOr" />
+
+
+        <EditText
+            android:id="@+id/etCountry"
+            style="@style/login_editText"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:hint="@string/enter_your_email"
+            android:inputType="textEmailAddress"
+            android:maxLength="40"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etDOB" />
+
+        <EditText
+            android:id="@+id/etSignUpPassword"
+            style="@style/login_editText"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:hint="@string/enter_your_password"
+            android:inputType="textPassword"
+            android:maxLength="25"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etCountry" />
+
+        <ImageView
+            android:id="@+id/ivSignUpHidePassword"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/hide_show_selector"
+            android:src="@drawable/ic_show_password"
+            app:layout_constraintBottom_toBottomOf="@id/etSignUpPassword"
+            app:layout_constraintEnd_toEndOf="@id/etSignUpPassword"
+            app:layout_constraintTop_toTopOf="@id/etSignUpPassword" />
+
+
+        <TextView
+            android:id="@+id/tvContinue"
+            style="@style/login_button_style"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/sign_in"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etSignUpPassword" />
+
+
+        <TextView
+            android:id="@+id/tv_backtologin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/back_to_log_in"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvContinue" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

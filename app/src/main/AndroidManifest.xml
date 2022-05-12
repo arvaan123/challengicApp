@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app.challengicapp">
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ChallengicApp">
+        <activity
+            android:name=".design.home.Home_Act"
+            android:exported="false" />
+        <activity
+            android:name=".design.signup.SignUpSecondAct"
+            android:exported="false" />
+        <activity
+            android:name=".design.backtologin.BackToLogIn"
+            android:exported="true"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".design.categories.CategoriesActivity"
+            android:exported="true" />
+        <activity
+            android:name=".design.forgotpasswordsecond.ForgotPasswordSecondActivity"
+            android:exported="true"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".design.forgotpassword.ForgotPasswordActivity"
+            android:exported="true"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".design.signup.SignUpActivity"
+            android:exported="true"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".design.login.LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".design.splash.SplashScreenActivity"
+            android:exported="true"
+            android:theme="@style/Theme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

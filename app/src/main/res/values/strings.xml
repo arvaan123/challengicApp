@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">ChallengicApp</string>
+    <string name="register_now">Register now!</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="or">Or</string>
+    <string name="continue_with_facebook">Continue with Facebook</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="log_in">LOG IN</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="hello">Hello !</string>
+    <string name="sign_up">Sign up.</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="back_to_log_in">Back to log in</string>
+    <string name="submit">Submit</string>
+    <string name="fp_forgot_password">Forgot password</string>
+    <string name="enter_your_new_password">Enter your new password</string>
+    <string name="enter_your_confirm_password">Enter your confirm password</string>
+    <string name="btn_continue">CONTINUE</string>
+    <string name="title_activity_back_to_log_in">BackToLogIn</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="sign_up_second_title">To much your likes better :)</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
