@@ -32,8 +32,6 @@ class LaderboardAdap(private val context: Context, private val mList: List<Lader
         holder.tv_person_name.setText(LaderboardModel.tv_person_name)
         holder.tv_votes.setText(LaderboardModel.tv_votes)
         holder.tv_results.setText(LaderboardModel.tv_results)
-
-
         Glide.with(context).load(LaderboardModel.profile_image).into(holder.profile_iv);
 
     }
