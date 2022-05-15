@@ -8,14 +8,12 @@ import android.view.ViewGroup
 import android.view.Window
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.app.challengicapp.R
 import com.app.challengicapp.design.model.PostModel
-import com.app.challengicapp.design.model.ReportReason
+import com.app.challengicapp.design.model.ReportReasonModel
 import com.bumptech.glide.Glide
-import de.hdodenhof.circleimageview.CircleImageView
 
 
 class PostAdap(private val context: Context, private val mList: List<PostModel>) :
@@ -45,39 +43,30 @@ class PostAdap(private val context: Context, private val mList: List<PostModel>)
             dialog.setContentView(R.layout.report_reason_box)
 
             val data = listOf(
-                ReportReason("It's spam"),
-                ReportReason("Nudity or sexual activities"),
-                ReportReason("Hate speech or symbols"),
-                ReportReason("Violence or dangerous organizations"),
-                ReportReason("Safe or illegal or regulated goods"),
-                ReportReason("Bulling or harassment"),
-                ReportReason("Intellectual property violation"),
-                ReportReason("Suicide or self-injury"),
-                ReportReason("Eating disorders"),
-                ReportReason("Scam or fraud"),
-                ReportReason("False information"),
-                ReportReason("I just don't like it")
+                ReportReasonModel("It's spam"),
+                ReportReasonModel("Nudity or sexual activities"),
+                ReportReasonModel("Hate speech or symbols"),
+                ReportReasonModel("Violence or dangerous organizations"),
+                ReportReasonModel("Safe or illegal or regulated goods"),
+                ReportReasonModel("Bulling or harassment"),
+                ReportReasonModel("Intellectual property violation"),
+                ReportReasonModel("Suicide or self-injury"),
+                ReportReasonModel("Eating disorders"),
+                ReportReasonModel("Scam or fraud"),
+                ReportReasonModel("False information"),
+                ReportReasonModel("I just don't like it")
             )
-
 
             val report_rv = dialog.findViewById<RecyclerView>(R.id.report_rv)
             report_rv.layoutManager = LinearLayoutManager(context)
             report_rv.adapter = ReportReasonAdap(context, data)
+
 
             val close=dialog.findViewById<ImageView>(R.id.close_iv)
             close.setOnClickListener {
                 dialog.dismiss()
             }
 
-
-//            val body = dialog.findViewById(R.id.body) as TextView
-//            body.text = title
-//            val yesBtn = dialog.findViewById(R.id.yesBtn) as Button
-//            val noBtn = dialog.findViewById(R.id.noBtn) as TextView
-//            yesBtn.setOnClickListener {
-//                dialog.dismiss()
-//            }
-//            noBtn.setOnClickListener { dialog.dismiss() }
             dialog.show()
 
         }

@@ -1,39 +1,25 @@
-package com.app.challengicapp.design.fragment
+package com.app.challengicapp.design.userprofile
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.ImageView
-import androidx.fragment.app.Fragment
+import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.app.challengicapp.R
 import com.app.challengicapp.design.adapter.PostAdap
-import com.app.challengicapp.design.model.LaderboardModel
 import com.app.challengicapp.design.model.PostModel
-import com.app.challengicapp.design.userprofile.UserProfile
-import java.util.*
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 
-class Addpost_frag : Fragment() {
-
+class UserProfile : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-    }
+        setContentView(R.layout.activity_user_profile)
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-
-        val view = inflater.inflate(R.layout.fragment_addpost, container, false)
-
-        val recyclerview = view.findViewById<RecyclerView>(R.id.post_rv)
-
+        val recyclerview = findViewById<RecyclerView>(R.id.user_post_rv)
         val data = listOf(
             PostModel(R.drawable.m1, R.drawable.l1, "#musicnotes #music"),
             PostModel(R.drawable.m2, R.drawable.l2, "#headphones #lyrics"),
@@ -47,23 +33,29 @@ class Addpost_frag : Fragment() {
         val layoutManager: RecyclerView.LayoutManager =
             StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         recyclerview.setLayoutManager(layoutManager)
-        val adapter = PostAdap(requireActivity(), data)
+        val adapter = PostAdap(this, data)
         recyclerview.adapter = adapter
 
-        val user_iv = view.findViewById<ImageView>(R.id.user_iv)
-        user_iv.setOnClickListener {
-            val intent = Intent(requireActivity(), UserProfile::class.java)
-            requireActivity().startActivity(intent)
-        }
+        val iv_more = findViewById<ImageView>(R.id.iv_more)
+        iv_more.setOnClickListener {
 
-        return view
+            showBottomSheetDialog()
+        }
 
     }
 
-    override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(itemView, savedInstanceState)
+    private fun showBottomSheetDialog() {
+        val bottomSheetDialog = BottomSheetDialog(this)
+        bottomSheetDialog.setContentView(R.layout.bottom_profile_option)
 
+        val ll_edit_profile = bottomSheetDialog.findViewById<LinearLayout>(R.id.ll_edit_profile)
 
+        ll_edit_profile?.setOnClickListener {
+            startActivity(Intent(this, EditProfile::class.java))
+
+        }
+
+        bottomSheetDialog.show()
     }
 
 }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/report_msg_bg">
@@ -43,25 +44,64 @@
         android:id="@+id/tv_report_reason"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="15dp"
-        android:text="Why are you reporting this post?"
+        android:padding="20dp"
+        android:text="Please tell us the reason for your report"
         android:textColor="@color/black"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
-    <View
-        android:id="@+id/view1"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#d2d2d2"
-        app:layout_constraintTop_toBottomOf="@+id/tv_report_reason" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/report_rv"
+    <EditText
+        android:id="@+id/et_report_msg_box"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/view1" />
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/report_et_box_bg"
+        android:gravity="top"
+        android:hint="Write a message...."
+        android:inputType="textMultiLine"
+        android:lines="10"
+        android:padding="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_report_reason" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@+id/et_report_msg_box">
+
+        <TextView
+            android:id="@+id/tv_go_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/report_msg_btn_bg"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="GO BACK"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_send"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/orange_background_button"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="SEND"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

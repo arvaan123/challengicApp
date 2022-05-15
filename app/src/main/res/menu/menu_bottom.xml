@@ -2,11 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/laderboard"
-        android:title="Rank" />
+        android:title="Rank"
+        android:icon="@drawable/menu_rank"/>
     <item
         android:id="@+id/add_post"
-        android:title="Add" />
+        android:title="Add"
+        android:icon="@drawable/menu_plus"/>
     <item
         android:id="@+id/search"
-        android:title="Search" />
+        android:title="Search"
+        android:icon="@drawable/ic_search"/>
 </menu>

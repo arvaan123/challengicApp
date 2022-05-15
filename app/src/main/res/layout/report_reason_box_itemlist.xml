@@ -35,7 +35,7 @@
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="3dp"
+        android:layout_height="2dp"
         android:background="#d2d2d2"
         app:layout_constraintTop_toBottomOf="@+id/rl_report_reason" />
 
