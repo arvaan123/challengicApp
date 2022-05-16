@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
@@ -13,7 +14,7 @@ import com.app.challengicapp.R
 import com.app.challengicapp.design.adapter.PostAdap
 import com.app.challengicapp.design.model.LaderboardModel
 import com.app.challengicapp.design.model.PostModel
-import com.app.challengicapp.design.userprofile.UserProfile
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import java.util.*
 
 
@@ -35,12 +36,12 @@ class Addpost_frag : Fragment() {
         val recyclerview = view.findViewById<RecyclerView>(R.id.post_rv)
 
         val data = listOf(
-            PostModel(R.drawable.m1, R.drawable.l1, "#musicnotes #music"),
-            PostModel(R.drawable.m2, R.drawable.l2, "#headphones #lyrics"),
-            PostModel(R.drawable.m3, R.drawable.l3, "#music #classical #igmusic"),
-            PostModel(R.drawable.m4, R.drawable.l4, "#singing #classicalmusic"),
-            PostModel(R.drawable.m5, R.drawable.l5, "#musician #radio"),
-            PostModel(R.drawable.m6, R.drawable.l1, "#guitar #music")
+            PostModel(R.drawable.m1, R.drawable.u2, "#musicnotes #music"),
+            PostModel(R.drawable.m2, R.drawable.u1, "#headphones #lyrics"),
+            PostModel(R.drawable.m3, R.drawable.result_user_profile1, "#music #classical #igmusic"),
+            PostModel(R.drawable.m4, R.drawable.result_user_profile2, "#singing #classicalmusic"),
+            PostModel(R.drawable.m5, R.drawable.u1, "#musician #radio"),
+            PostModel(R.drawable.m6, R.drawable.u2, "#guitar #music")
         )
 
 
@@ -52,13 +53,18 @@ class Addpost_frag : Fragment() {
 
         val user_iv = view.findViewById<ImageView>(R.id.user_iv)
         user_iv.setOnClickListener {
-            val intent = Intent(requireActivity(), UserProfile::class.java)
-            requireActivity().startActivity(intent)
+//            val intent = Intent(requireActivity(), UserProfile::class.java)
+//            requireActivity().startActivity(intent)
+            val userFrag = User_frag()
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.container, userFrag).addToBackStack(null).commit()
+
         }
 
         return view
 
     }
+
 
     override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
         super.onViewCreated(itemView, savedInstanceState)

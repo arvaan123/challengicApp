@@ -47,7 +47,7 @@
             android:id="@+id/user_iv"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/l1"
+            android:src="@drawable/user_profile"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toRightOf="@+id/fab_notification"
             app:layout_constraintTop_toTopOf="parent" />

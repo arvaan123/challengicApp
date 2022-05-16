@@ -11,8 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ChallengicApp">
-        <activity android:name=".design.userprofile.EditProfile"></activity>
-        <activity android:name=".design.userprofile.UserProfile" />
+        <activity android:name=".design.userprofile.EditProfile" />
         <activity
             android:name=".design.home.Home_Act"
             android:exported="false" />
