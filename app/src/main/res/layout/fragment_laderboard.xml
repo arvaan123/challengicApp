@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         app:cardCornerRadius="20dp"
         android:layout_marginHorizontal="15dp"
-        app:cardBackgroundColor="#D5FAF5F5"
+        app:cardBackgroundColor="#EDFFFDFD"
         app:cardElevation="20dp">
 
         <androidx.recyclerview.widget.RecyclerView
@@ -53,6 +53,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:scrollbarSize="5dp"
+            android:fadeScrollbars="false"
+            android:scrollbarThumbVertical="@drawable/scrollbar_style"
+            android:scrollbarTrackVertical="@drawable/scrollbar_track_style"
+            android:scrollbars="vertical"
             android:elevation="10dp" />
 
 

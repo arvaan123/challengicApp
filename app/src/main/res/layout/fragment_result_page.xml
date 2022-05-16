@@ -43,18 +43,21 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:orientation="horizontal">
+        android:layout_marginHorizontal="25dp"
+        android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:weightSum="3">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="33dp"
+            android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="130dp"
+                android:layout_width="wrap_content"
                 android:layout_height="90dp"
                 android:src="@drawable/result_user_profile1" />
 
@@ -68,7 +71,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="154dp"
+                android:layout_height="155dp"
                 android:layout_marginTop="70dp"
                 android:background="@drawable/result_2nd_bg"
                 android:gravity="center"
@@ -80,7 +83,7 @@
                     android:layout_margin="15dp"
                     android:text="2nd"
                     android:textColor="@color/white"
-                    android:textSize="30sp"
+                    android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -99,13 +102,14 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="130dp"
+                android:layout_width="wrap_content"
                 android:layout_height="126dp"
                 android:src="@drawable/user_profile" />
 
@@ -119,7 +123,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="202dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/result_1st_bg"
                 android:gravity="center_horizontal"
@@ -131,13 +135,14 @@
                     android:layout_marginVertical="25dp"
                     android:text="1st"
                     android:textColor="@color/white"
-                    android:textSize="30sp"
+                    android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/result_1st_tv_bg"
+                    android:lineSpacingExtra="24sp"
                     android:text="1256 votes"
                     android:textAlignment="center"
                     android:textColor="@color/white"
@@ -150,14 +155,15 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="33dp"
+            android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="130dp"
+                android:layout_width="wrap_content"
                 android:layout_height="90dp"
                 android:src="@drawable/result_user_profile2" />
 
@@ -171,8 +177,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="103dp"
+                android:layout_height="138dp"
+                android:layout_marginTop="87dp"
                 android:background="@drawable/result_3rd_bg"
                 android:gravity="center"
                 android:orientation="vertical">
@@ -183,7 +189,7 @@
                     android:layout_margin="15dp"
                     android:text="3rd"
                     android:textColor="@color/white"
-                    android:textSize="30sp"
+                    android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -207,7 +213,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="8dp"
-        app:cardBackgroundColor="#EEFAF5F5"
+        app:cardBackgroundColor="#F7F3EFEF"
         app:cardCornerRadius="20dp"
         app:cardElevation="20dp">
 
@@ -217,7 +223,6 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:elevation="10dp" />
-
 
     </androidx.cardview.widget.CardView>
 
