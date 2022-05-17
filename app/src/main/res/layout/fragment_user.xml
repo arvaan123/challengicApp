@@ -165,7 +165,6 @@
             android:layout_width="10dp"
             android:layout_height="20dp"
             android:layout_centerVertical="true"
-            android:layout_marginHorizontal="10dp"
             android:layout_toEndOf="@+id/tv_user_name"
             android:src="@drawable/ic_profile_active" />
 
@@ -180,7 +179,9 @@
             <ImageView
                 android:id="@+id/country_iv"
                 android:layout_width="30dp"
-                android:layout_height="30dp" />
+                android:layout_height="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/cf3" />
 
         </androidx.cardview.widget.CardView>
 
@@ -244,8 +245,54 @@
         android:layout_height="1dp"
         android:background="#d2d2d2" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/user_post_rv"
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp">
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/danceChip"
+                style="@style/chipBackGround"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dance"
+                app:chipCornerRadius="7dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/popularChip"
+                style="@style/chipBackGround"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Popular"
+                app:chipCornerRadius="7dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/sportsChip"
+                style="@style/chipBackGround"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sports"
+                app:chipCornerRadius="7dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/singChip"
+                style="@style/chipBackGround"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sing"
+                app:chipCornerRadius="7dp" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/userChipFrag"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="15dp"

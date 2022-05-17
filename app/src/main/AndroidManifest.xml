@@ -13,7 +13,7 @@
         android:theme="@style/Theme.ChallengicApp">
         <activity android:name=".design.userprofile.EditProfile" />
         <activity
-            android:name=".design.home.Home_Act"
+            android:name=".design.home.HomeActivity"
             android:exported="false" />
         <activity
             android:name=".design.signup.SignUpSecondAct"

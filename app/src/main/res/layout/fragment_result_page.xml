@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".design.fragment.ResultPage_frag">
+    tools:context=".design.result.ResultPageFragment">
 
     <View
         android:layout_width="match_parent"
@@ -71,8 +71,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="155dp"
-                android:layout_marginTop="70dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="50dp"
                 android:background="@drawable/result_2nd_bg"
                 android:gravity="center"
                 android:orientation="vertical">
@@ -80,7 +80,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
                     android:text="2nd"
                     android:textColor="@color/white"
                     android:textSize="24sp"
@@ -123,8 +122,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="202dp"
-                android:layout_marginTop="20dp"
+                android:layout_height="147dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/result_1st_bg"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
@@ -132,8 +131,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="25dp"
                     android:text="1st"
+                    android:layout_margin="10dp"
                     android:textColor="@color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -177,8 +176,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="138dp"
-                android:layout_marginTop="87dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="80dp"
                 android:background="@drawable/result_3rd_bg"
                 android:gravity="center"
                 android:orientation="vertical">
@@ -186,7 +185,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
                     android:text="3rd"
                     android:textColor="@color/white"
                     android:textSize="24sp"
@@ -195,7 +193,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
+                    android:layout_margin="5dp"
                     android:background="@drawable/result_3rd_tv_bg"
                     android:text="678 votes"
                     android:textAlignment="center"
@@ -213,7 +211,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="8dp"
-        app:cardBackgroundColor="#F7F3EFEF"
+        app:cardBackgroundColor="#EEF3EFEF"
         app:cardCornerRadius="20dp"
         app:cardElevation="20dp">
 

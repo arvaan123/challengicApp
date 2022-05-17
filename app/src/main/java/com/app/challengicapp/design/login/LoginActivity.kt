@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.TextView
 import com.app.challengicapp.R
 import com.app.challengicapp.design.forgotpassword.ForgotPasswordActivity
-import com.app.challengicapp.design.home.Home_Act
+import com.app.challengicapp.design.home.HomeActivity
 import com.app.challengicapp.design.signup.SignUpActivity
 
 class LoginActivity : AppCompatActivity() {
@@ -23,7 +23,7 @@ class LoginActivity : AppCompatActivity() {
         tvLoginButtonLogin = findViewById(R.id.tvLoginButtonLogin)
 
         tvLoginButtonLogin.setOnClickListener {
-            startActivity(Intent(this, Home_Act::class.java))
+            startActivity(Intent(this, HomeActivity::class.java))
 
         }
 
