@@ -211,7 +211,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="8dp"
-        app:cardBackgroundColor="#EEF3EFEF"
+        app:cardBackgroundColor="#F3F3EFEF"
         app:cardCornerRadius="20dp"
         app:cardElevation="20dp">
 

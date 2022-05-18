@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import com.app.challengicapp.R
+import com.app.challengicapp.design.categories.CategoriesActivity
 import com.app.challengicapp.design.login.LoginActivity
 
 class SplashScreenActivity : AppCompatActivity() {
@@ -17,9 +18,9 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
 
-        mRunnable= Runnable {
+        mRunnable = Runnable {
             run {
-                    startActivity(Intent(this,LoginActivity::class.java))
+                startActivity(Intent(this, CategoriesActivity::class.java))
             }
         }
         mHandler = Handler(Looper.getMainLooper())

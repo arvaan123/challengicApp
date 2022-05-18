@@ -9,7 +9,10 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.app.challengicapp.R
+import com.app.challengicapp.design.chip.*
+import com.app.challengicapp.design.laderboard.LaderboardFragment
 import com.app.challengicapp.design.userprofile.UserFragment
+import com.google.android.material.chip.Chip
 
 
 class ChallengicFragment : Fragment() {
@@ -27,28 +30,58 @@ class ChallengicFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_challengic, container, false)
 
-        val recyclerview = view.findViewById<RecyclerView>(R.id.post_rv)
+        //chip
 
-        val data = listOf(
-            ChallengicModel(R.drawable.m1, R.drawable.u2, "#musicnotes #music"),
-            ChallengicModel(R.drawable.m2, R.drawable.u1, "#headphones #lyrics"),
-            ChallengicModel(R.drawable.m3, R.drawable.result_user_profile1, "#music #classical #igmusic"),
-            ChallengicModel(R.drawable.m4, R.drawable.result_user_profile2, "#singing #classicalmusic"),
-            ChallengicModel(R.drawable.m5, R.drawable.u1, "#musician #radio"),
-            ChallengicModel(R.drawable.m6, R.drawable.u2, "#guitar #music")
-        )
+        val danceChip = view.findViewById<Chip>(R.id.danceChip)
+        danceChip.setOnClickListener {
+            val DanceFrag = DanceFragment()
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.ChipFrag, DanceFrag).commit()
 
+        }
 
-        val layoutManager: RecyclerView.LayoutManager =
-            StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-        recyclerview.setLayoutManager(layoutManager)
-        val adapter = ChallengicAdap(requireActivity(), data)
-        recyclerview.adapter = adapter
+        val popularChip = view.findViewById<Chip>(R.id.popularChip)
+        popularChip.setOnClickListener {
+            val popularFrag = PopularFragment()
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.ChipFrag, popularFrag).commit()
+        }
+
+        val sportsChip = view.findViewById<Chip>(R.id.sportsChip)
+        sportsChip.setOnClickListener {
+            val sportsFrag = SportsFragment()
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.ChipFrag, sportsFrag).commit()
+        }
+
+        val singChip = view.findViewById<Chip>(R.id.singChip)
+        singChip.setOnClickListener {
+            val SingFrag = SingFragment()
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.ChipFrag, SingFrag).commit()
+        }
+
+        val liveChip = view.findViewById<Chip>(R.id.liveChip)
+        liveChip.setOnClickListener {
+            val LiveFrag = LiveFragment()
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.ChipFrag, LiveFrag).commit()
+        }
+
+        val allChip = view.findViewById<Chip>(R.id.allChip)
+        allChip.setOnClickListener {
+            val AllFrag = AllFragment()
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.ChipFrag, AllFrag).commit()
+        }
+
+        val DanceFrag = DanceFragment()
+        requireActivity().supportFragmentManager.beginTransaction()
+            .replace(R.id.ChipFrag, DanceFrag).commit()
+
 
         val user_iv = view.findViewById<ImageView>(R.id.user_iv)
         user_iv.setOnClickListener {
-//            val intent = Intent(requireActivity(), UserProfile::class.java)
-//            requireActivity().startActivity(intent)
             val userFrag = UserFragment()
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.container, userFrag).addToBackStack(null).commit()

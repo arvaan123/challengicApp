@@ -54,8 +54,78 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/post_rv"
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:scrollbars="none">
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/danceChip"
+                style="@style/chipBackGround"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:checked="true"
+                android:text="Dance"
+                app:chipCornerRadius="7dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/popularChip"
+                style="@style/chipBackGround"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="Popular"
+
+                app:chipCornerRadius="7dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/sportsChip"
+                style="@style/chipBackGround"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:text="Sports"
+                app:chipCornerRadius="7dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/singChip"
+                style="@style/chipBackGround"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sing"
+                app:chipCornerRadius="7dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/liveChip"
+                style="@style/chipBackGround"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Live"
+                app:chipCornerRadius="7dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/allChip"
+                style="@style/chipBackGround"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All"
+                app:chipCornerRadius="7dp" />
+
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/ChipFrag"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="15dp"

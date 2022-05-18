@@ -33,6 +33,12 @@
         <item name="android:textColor">@color/chip_tv</item>
     </style>
 
+    <style name="SearchChipBackGround" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/white</item>
+        <item name="chipStrokeColor">#d2d2d2</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
 
 
 </resources>

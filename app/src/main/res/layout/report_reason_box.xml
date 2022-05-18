@@ -29,7 +29,7 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/close_iv"
+                android:id="@+id/closeiv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -63,7 +63,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_report_reason" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/report_rv"
+            android:id="@+id/reportrv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/view1" />

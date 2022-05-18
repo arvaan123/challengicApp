@@ -36,7 +36,7 @@ class ReportReasonAdap(
             dialog.setCancelable(false)
             dialog.setContentView(R.layout.report_msg_box)
 
-            val close = dialog.findViewById<ImageView>(R.id.close_iv)
+            val close = dialog.findViewById<ImageView>(R.id.closeiv)
             close.setOnClickListener {
                 dialog.dismiss()
             }

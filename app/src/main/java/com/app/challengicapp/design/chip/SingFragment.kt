@@ -27,11 +27,15 @@ class SingFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_sing, container, false)
 
         val singrv = view.findViewById<RecyclerView>(R.id.singrv)
-        val data = listOf(
+        val singdatalist = listOf(
             ChallengicModel(R.drawable.m1, R.drawable.u1, "#musicnotes #music"),
             ChallengicModel(R.drawable.m2, R.drawable.u2, "#headphones #lyrics"),
             ChallengicModel(R.drawable.m7, R.drawable.result_user_profile2, "#music #igmusic"),
-            ChallengicModel(R.drawable.m4, R.drawable.result_user_profile1, "#singing #classicalmusic"),
+            ChallengicModel(
+                R.drawable.m4,
+                R.drawable.result_user_profile1,
+                "#singing #classicalmusic"
+            ),
             ChallengicModel(R.drawable.m8, R.drawable.u2, "#musician #singing #concert #livemusic"),
             ChallengicModel(R.drawable.m6, R.drawable.u1, "#guitar #music"),
             ChallengicModel(R.drawable.m9, R.drawable.result_user_profile1, "#violin #music"),
@@ -43,8 +47,9 @@ class SingFragment : Fragment() {
         val layoutManager: RecyclerView.LayoutManager =
             StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         singrv.setLayoutManager(layoutManager)
-        val adapter = ChallengicAdap(requireActivity(), data)
+        val adapter = ChallengicAdap(requireActivity(), singdatalist)
         singrv.adapter = adapter
+        adapter.notifyDataSetChanged()
 
         return view
     }

@@ -26,7 +26,7 @@ class SportsFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_sports, container, false)
 
         val sportsrv = view.findViewById<RecyclerView>(R.id.sportsrv)
-        val data = listOf(
+        val sportsdatalist = listOf(
             ChallengicModel(R.drawable.s1, R.drawable.u2, "#sports #follow #cricket"),
 
             ChallengicModel(R.drawable.s2, R.drawable.u1, "#sport #fitness #like "),
@@ -59,8 +59,9 @@ class SportsFragment : Fragment() {
         val layoutManager: RecyclerView.LayoutManager =
             StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         sportsrv.setLayoutManager(layoutManager)
-        val adapter = ChallengicAdap(requireActivity(), data)
+        val adapter = ChallengicAdap(requireActivity(), sportsdatalist)
         sportsrv.adapter = adapter
+        adapter.notifyDataSetChanged()
 
         return view
     }

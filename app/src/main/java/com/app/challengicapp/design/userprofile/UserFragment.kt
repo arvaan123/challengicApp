@@ -29,9 +29,6 @@ class UserFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_user, container, false)
 
-        val DanceFrag = DanceFragment()
-        requireActivity().supportFragmentManager.beginTransaction()
-            .replace(R.id.userChipFrag, DanceFrag).addToBackStack(null).commit()
 
         val iv_more = view.findViewById<ImageView>(R.id.iv_more)
         iv_more.setOnClickListener {
@@ -43,28 +40,33 @@ class UserFragment : Fragment() {
         danceChip.setOnClickListener {
             val DanceFrag = DanceFragment()
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.userChipFrag, DanceFrag).addToBackStack(null).commit()
+                .replace(R.id.userChipFrag, DanceFrag).commit()
         }
 
-        val popularChip = view.findViewById<Chip>(R.id.danceChip)
+        val popularChip = view.findViewById<Chip>(R.id.popularChip)
         popularChip.setOnClickListener {
             val popularFrag = PopularFragment()
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.userChipFrag, popularFrag).addToBackStack(null).commit()
+                .replace(R.id.userChipFrag, popularFrag).commit()
         }
-        val sportsChip = view.findViewById<Chip>(R.id.danceChip)
+
+        val sportsChip = view.findViewById<Chip>(R.id.sportsChip)
         sportsChip.setOnClickListener {
             val sportsFrag = SportsFragment()
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.userChipFrag, sportsFrag).addToBackStack(null).commit()
+                .replace(R.id.userChipFrag, sportsFrag).commit()
         }
 
         val singChip = view.findViewById<Chip>(R.id.singChip)
         singChip.setOnClickListener {
             val SingFrag = SingFragment()
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.userChipFrag, SingFrag).addToBackStack(null).commit()
+                .replace(R.id.userChipFrag, SingFrag).commit()
         }
+
+        val DanceFrag = DanceFragment()
+        requireActivity().supportFragmentManager.beginTransaction()
+            .replace(R.id.userChipFrag, DanceFrag).addToBackStack(null).commit()
 
         return view
     }

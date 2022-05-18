@@ -27,11 +27,22 @@ class SearchFragment : Fragment() {
 
         val searchdata = listOf(
             SearchModel(R.drawable.m1),
-            SearchModel(R.drawable.m2),
-            SearchModel(R.drawable.m3),
+            SearchModel(R.drawable.d10),
+            SearchModel(R.drawable.p3),
+            SearchModel(R.drawable.l2),
+            SearchModel(R.drawable.s3),
+            SearchModel(R.drawable.m8),
+            SearchModel(R.drawable.l5),
+            SearchModel(R.drawable.s7),
+            SearchModel(R.drawable.d4),
+            SearchModel(R.drawable.p5),
+            SearchModel(R.drawable.p7),
+            SearchModel(R.drawable.s9),
             SearchModel(R.drawable.m4),
-            SearchModel(R.drawable.m5),
-            SearchModel(R.drawable.m6)
+            SearchModel(R.drawable.d3),
+            SearchModel(R.drawable.l6),
+            SearchModel(R.drawable.d9),
+            SearchModel(R.drawable.s4)
         )
 
 

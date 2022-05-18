@@ -11,8 +11,8 @@ import com.app.challengicapp.R
 import com.app.challengicapp.design.challengic.ChallengicAdap
 import com.app.challengicapp.design.challengic.ChallengicModel
 
+class LiveFragment : Fragment() {
 
-class PopularFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,38 +23,37 @@ class PopularFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        val view = inflater.inflate(R.layout.fragment_live, container, false)
 
-        val view = inflater.inflate(R.layout.fragment_popular, container, false)
-
-        val popularrv = view.findViewById<RecyclerView>(R.id.popularrv)
-        val populardatalist = listOf(
-            ChallengicModel(R.drawable.p1, R.drawable.u2, "#picture #loading"),
-
-            ChallengicModel(R.drawable.p2, R.drawable.u1, "#picoftheday #like #nature"),
-            ChallengicModel(R.drawable.p3, R.drawable.u2, "#naturephotography #beauty "),
+        val liverv = view.findViewById<RecyclerView>(R.id.liverv)
+        val livedatalist = listOf(
+            ChallengicModel(R.drawable.l1, R.drawable.u1, "#live #photography"),
+            ChallengicModel(R.drawable.l2, R.drawable.u2, "#enjoylife #enjoythemoment "),
             ChallengicModel(
-                R.drawable.p4,
-                R.drawable.result_user_profile1,
-                "#rainleaf #photoshoot"
-            ),
-            ChallengicModel(
-                R.drawable.p5,
+                R.drawable.l3,
                 R.drawable.result_user_profile2,
-                "#smiley #smileeveryday #art"
+                "#naturephotography #flowers #naturebeauty"
             ),
             ChallengicModel(
-                R.drawable.p6,
+                R.drawable.l4,
                 R.drawable.result_user_profile1,
-                "#cartoon #characterdesign"
+                "#like #instadaily"
             ),
-            ChallengicModel(R.drawable.p7, R.drawable.u2, "#naturecaptures #photography")
+            ChallengicModel(R.drawable.l6, R.drawable.u1, "#flower_daily #flora #nature"),
+
+            ChallengicModel(
+                R.drawable.l5,
+                R.drawable.u2,
+                "#creativity #design #photography"
+            )
+
         )
 
         val layoutManager: RecyclerView.LayoutManager =
             StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-        popularrv.setLayoutManager(layoutManager)
-        val adapter = ChallengicAdap(requireActivity(), populardatalist)
-        popularrv.adapter = adapter
+        liverv.setLayoutManager(layoutManager)
+        val adapter = ChallengicAdap(requireActivity(), livedatalist)
+        liverv.adapter = adapter
         adapter.notifyDataSetChanged()
 
         return view
