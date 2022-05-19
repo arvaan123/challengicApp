@@ -1,31 +1,43 @@
-package com.app.challengicapp.design.home
+package com.app.challengicapp.design.userprofile
 
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import androidx.viewpager.widget.ViewPager
 import com.app.challengicapp.R
 import com.app.challengicapp.design.challengic.ChallengicFragment
 import com.app.challengicapp.design.laderboard.LaderboardFragment
 import com.app.challengicapp.design.search.SearchFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.tabs.TabLayout
 
+class UserFollowActivity : AppCompatActivity() {
 
-class HomeActivity : AppCompatActivity() {
+    lateinit var bottomNavigation: BottomNavigationView
 
-    lateinit var bottomNav: BottomNavigationView
+    private lateinit var pager: ViewPager
+    private lateinit var tab: TabLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        setContentView(R.layout.activity_user_follow)
 
-        // loadFragment(Laderboard_frag())
-        val laderBoardFrag = LaderboardFragment()
-        val FragTrans = supportFragmentManager.beginTransaction()
-        FragTrans.replace(R.id.container, laderBoardFrag, "")
-        FragTrans.commit()
+        pager = findViewById(R.id.viewPager)
+        tab = findViewById(R.id.tabs)
 
-        bottomNav = findViewById(R.id.bottomNav) as BottomNavigationView
+        val adapter = UserViewPagerAdapter(supportFragmentManager)
 
-        bottomNav.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener { item ->
+        adapter.addFragment(UserFollowingFragment(), "336 following")
+        adapter.addFragment(UserFollowersFragment(), "1078 followers")
+
+        pager.adapter = adapter
+
+        tab.setupWithViewPager(pager)
+
+        bottomNavigation = findViewById(R.id.bottomNavigation) as BottomNavigationView
+
+
+/*
+        bottomNavigation.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {
 
                 R.id.laderboard -> {
@@ -54,10 +66,9 @@ class HomeActivity : AppCompatActivity() {
             }
             false
         })
+*/
+
+        bottomNavigation.setSelectedItemId(R.id.challengic);
+
     }
-
-//    override fun onBackPressed() {
-//        finish()
-//    }
-
 }

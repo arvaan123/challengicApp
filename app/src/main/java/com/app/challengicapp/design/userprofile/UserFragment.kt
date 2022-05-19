@@ -2,19 +2,20 @@ package com.app.challengicapp.design.userprofile
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
+import androidx.fragment.app.Fragment
 import com.app.challengicapp.R
-import com.app.challengicapp.design.chip.DanceFragment
-import com.app.challengicapp.design.chip.PopularFragment
-import com.app.challengicapp.design.chip.SingFragment
-import com.app.challengicapp.design.chip.SportsFragment
+import com.app.challengicapp.design.userprofile.userchipgroup.UserDanceChipFragment
+import com.app.challengicapp.design.userprofile.userchipgroup.UserPopularChipFragment
+import com.app.challengicapp.design.userprofile.userchipgroup.UserSingChipFragment
+import com.app.challengicapp.design.userprofile.userchipgroup.UserSportsChipFragment
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.chip.Chip
+
 
 class UserFragment : Fragment() {
 
@@ -29,45 +30,53 @@ class UserFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_user, container, false)
 
+        val UDanceFrag = UserDanceChipFragment()
+        requireActivity().supportFragmentManager.beginTransaction()
+            .replace(R.id.userChipFrag, UDanceFrag).commit()
 
         val iv_more = view.findViewById<ImageView>(R.id.iv_more)
         iv_more.setOnClickListener {
-
             showBottomSheetDialog()
         }
 
+        //chip
         val danceChip = view.findViewById<Chip>(R.id.danceChip)
         danceChip.setOnClickListener {
-            val DanceFrag = DanceFragment()
+            val UDanceFrag = UserDanceChipFragment()
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.userChipFrag, DanceFrag).commit()
+                .replace(R.id.userChipFrag, UDanceFrag).commit()
         }
 
         val popularChip = view.findViewById<Chip>(R.id.popularChip)
         popularChip.setOnClickListener {
-            val popularFrag = PopularFragment()
+            val popularFrag = UserPopularChipFragment()
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.userChipFrag, popularFrag).commit()
         }
 
         val sportsChip = view.findViewById<Chip>(R.id.sportsChip)
         sportsChip.setOnClickListener {
-            val sportsFrag = SportsFragment()
+            val sportsFrag = UserSportsChipFragment()
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.userChipFrag, sportsFrag).commit()
         }
 
         val singChip = view.findViewById<Chip>(R.id.singChip)
         singChip.setOnClickListener {
-            val SingFrag = SingFragment()
+            val SingFrag = UserSingChipFragment()
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.userChipFrag, SingFrag).commit()
         }
 
-        val DanceFrag = DanceFragment()
-        requireActivity().supportFragmentManager.beginTransaction()
-            .replace(R.id.userChipFrag, DanceFrag).addToBackStack(null).commit()
+        val llfollowing = view.findViewById<LinearLayout>(R.id.ll_following)
+        llfollowing.setOnClickListener {
+            startActivity(Intent(requireActivity(), UserFollowActivity::class.java))
+        }
 
+        val llfollowers = view.findViewById<LinearLayout>(R.id.ll_followers)
+        llfollowers.setOnClickListener {
+            startActivity(Intent(requireActivity(), UserFollowActivity::class.java))
+        }
         return view
     }
 

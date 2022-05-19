@@ -1,4 +1,4 @@
-package com.app.challengicapp.design.chip
+package com.app.challengicapp.design.userprofile.userchipgroup
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,12 +10,16 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.app.challengicapp.R
 import com.app.challengicapp.design.challengic.ChallengicAdap
 import com.app.challengicapp.design.challengic.ChallengicModel
+import com.app.challengicapp.design.userprofile.UserVideoOptionAdap
+import com.app.challengicapp.design.userprofile.UserVideoOptionModel
 
-class SportsFragment : Fragment() {
+class UserSportsChipFragment : Fragment() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
     }
 
     override fun onCreateView(
@@ -23,33 +27,37 @@ class SportsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_sports, container, false)
+        val view = inflater.inflate(R.layout.fragment_user_sports_chip, container, false)
 
-        val sportsrv = view.findViewById<RecyclerView>(R.id.sportsrv)
+        val usportsrv = view.findViewById<RecyclerView>(R.id.usportsrv)
         val sportsdatalist = listOf(
-            ChallengicModel(R.drawable.s1, R.drawable.u2, "#sports #follow #cricket"),
+            UserVideoOptionModel(R.drawable.s1, R.drawable.u2, "#sports #follow #cricket"),
 
-            ChallengicModel(R.drawable.s2, R.drawable.u1, "#sport #fitness #like "),
-            ChallengicModel(R.drawable.s3, R.drawable.u2, "#volleyballteam #volleyballplayers"),
-            ChallengicModel(
+            UserVideoOptionModel(R.drawable.s2, R.drawable.u1, "#sport #fitness #like "),
+            UserVideoOptionModel(
+                R.drawable.s3,
+                R.drawable.u2,
+                "#volleyballteam #volleyballplayers"
+            ),
+            UserVideoOptionModel(
                 R.drawable.s4,
                 R.drawable.result_user_profile1,
                 "#sportsblog #football #sportslife"
             ),
-            ChallengicModel(
+            UserVideoOptionModel(
                 R.drawable.s5,
                 R.drawable.result_user_profile2,
                 "#indiancricket #cricketfans "
             ),
-            ChallengicModel(
+            UserVideoOptionModel(
                 R.drawable.s6,
                 R.drawable.result_user_profile1,
                 "#sportsperformance #badmintonplayer "
             ),
-            ChallengicModel(R.drawable.s7, R.drawable.u2, "#sports #basketball "),
-            ChallengicModel(R.drawable.s8, R.drawable.u1, "#footballplayer #footballer"),
+            UserVideoOptionModel(R.drawable.s7, R.drawable.u2, "#sports #basketball "),
+            UserVideoOptionModel(R.drawable.s8, R.drawable.u1, "#footballplayer #footballer"),
 
-            ChallengicModel(
+            UserVideoOptionModel(
                 R.drawable.s9,
                 R.drawable.result_user_profile2,
                 "#sportsphotography #badmintontrickshot"
@@ -58,9 +66,9 @@ class SportsFragment : Fragment() {
 
         val layoutManager: RecyclerView.LayoutManager =
             StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-        sportsrv.setLayoutManager(layoutManager)
-        val adapter = ChallengicAdap(requireActivity(), sportsdatalist)
-        sportsrv.adapter = adapter
+        usportsrv.setLayoutManager(layoutManager)
+        val adapter = UserVideoOptionAdap(requireActivity(), sportsdatalist)
+        usportsrv.adapter = adapter
         adapter.notifyDataSetChanged()
 
         return view

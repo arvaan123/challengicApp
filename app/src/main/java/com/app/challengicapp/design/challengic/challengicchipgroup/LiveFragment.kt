@@ -1,4 +1,4 @@
-package com.app.challengicapp.design.chip
+package com.app.challengicapp.design.challengic.challengicchipgroup
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.Window
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -14,6 +15,7 @@ import com.app.challengicapp.R
 import com.app.challengicapp.design.reportreason.ReportReasonAdap
 import com.app.challengicapp.design.reportreason.ReportReasonModel
 import com.bumptech.glide.Glide
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 
 class ChallengicAdap(
@@ -40,6 +42,33 @@ class ChallengicAdap(
         holder.tvtags.setText(PostModel.tvTag)
 
         holder.moreImage.setOnClickListener {
+            showBottomSheetDialog()
+        }
+
+    }
+
+    private fun showBottomSheetDialog() {
+        val bottomSheetDialog = BottomSheetDialog(context)
+        bottomSheetDialog.setContentView(R.layout.bottom_challengic_video_option)
+
+        val tvFollow=bottomSheetDialog.findViewById<TextView>(R.id.tvFollow)
+
+        val tvunFollow=bottomSheetDialog.findViewById<TextView>(R.id.tvunFollow)
+
+        tvunFollow?.setOnClickListener {
+            tvunFollow.setVisibility(View.GONE)
+            tvFollow?.setVisibility(View.VISIBLE)
+
+        }
+
+        tvFollow?.setOnClickListener {
+            tvunFollow?.setVisibility(View.VISIBLE)
+            tvFollow.setVisibility(View.GONE)
+
+        }
+
+        val layReport = bottomSheetDialog.findViewById<LinearLayout>(R.id.layReport)
+        layReport?.setOnClickListener {
             val dialog = Dialog(context)
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
             dialog.setCancelable(false)
@@ -71,10 +100,11 @@ class ChallengicAdap(
             }
 
             dialog.show()
-
         }
 
+        bottomSheetDialog.show()
     }
+
 
     override fun getItemCount(): Int {
         return challengicList.size

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
@@ -28,6 +29,7 @@ class ReportReasonAdap(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val ReportReason = report_list[position]
         holder.tv_report_reason_list.setText(ReportReason.tv_report_reason_list)
+        val newValue: String = holder.tv_report_reason_list.getText().toString()
 
         holder.rl_report_reason.setOnClickListener {
 
@@ -40,6 +42,9 @@ class ReportReasonAdap(
             close.setOnClickListener {
                 dialog.dismiss()
             }
+
+            val et_report_msg_box=dialog.findViewById<EditText>(R.id.et_report_msg_box)
+            et_report_msg_box.setText(newValue)
 
             val tv_go_back = dialog.findViewById<TextView>(R.id.tv_go_back)
             tv_go_back.setOnClickListener {

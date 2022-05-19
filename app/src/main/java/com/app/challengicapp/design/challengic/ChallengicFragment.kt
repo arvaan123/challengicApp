@@ -6,11 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.app.challengicapp.R
-import com.app.challengicapp.design.chip.*
-import com.app.challengicapp.design.laderboard.LaderboardFragment
+import com.app.challengicapp.design.challengic.challengicchipgroup.*
 import com.app.challengicapp.design.userprofile.UserFragment
 import com.google.android.material.chip.Chip
 
