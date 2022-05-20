@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -69,6 +70,11 @@ class LaderboardFragment : Fragment() {
         recyclerview.setHasFixedSize(false)
         recyclerview.layoutManager = LinearLayoutManager(requireActivity())
         recyclerview.adapter = LaderboardAdap(requireActivity(), data)
+
+        val backiv=view.findViewById<ImageView>(R.id.backiv)
+        backiv.setOnClickListener {
+            requireActivity().finish()
+        }
 
         return view
     }

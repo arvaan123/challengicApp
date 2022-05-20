@@ -6,7 +6,7 @@
         android:icon="@drawable/menu_rank"/>
     <item
         android:id="@+id/challengic"
-        android:title="Add"
+        android:title="Challengic"
         android:icon="@drawable/menu_plus"/>
     <item
         android:id="@+id/search"

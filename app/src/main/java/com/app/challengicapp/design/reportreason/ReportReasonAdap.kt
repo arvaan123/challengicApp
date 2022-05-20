@@ -2,10 +2,7 @@ package com.app.challengicapp.design.reportreason
 
 import android.app.Dialog
 import android.content.Context
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.view.Window
+import android.view.*
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.RelativeLayout
@@ -43,15 +40,12 @@ class ReportReasonAdap(
                 dialog.dismiss()
             }
 
-            val et_report_msg_box=dialog.findViewById<EditText>(R.id.et_report_msg_box)
+            val et_report_msg_box = dialog.findViewById<EditText>(R.id.et_report_msg_box)
             et_report_msg_box.setText(newValue)
 
             val tv_go_back = dialog.findViewById<TextView>(R.id.tv_go_back)
             tv_go_back.setOnClickListener {
-                val dialog = Dialog(context)
-                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-                dialog.setCancelable(false)
-                dialog.setContentView(R.layout.report_reason_box)
+                dialog.dismiss()
             }
 
             dialog.show()

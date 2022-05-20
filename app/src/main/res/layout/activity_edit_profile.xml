@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".design.userprofile.EditProfile">
+    tools:context=".design.userprofile.EditProfileActivity">
 
     <View
         android:layout_width="match_parent"
@@ -19,6 +19,7 @@
         android:weightSum="3">
 
         <TextView
+            android:id="@+id/tvCancel"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

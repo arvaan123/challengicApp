@@ -7,19 +7,35 @@
     android:layout_margin="10dp"
     android:orientation="vertical">
 
-    <SearchView
-        android:id="@+id/searchView"
-        android:layout_width="match_parent"
+    <RelativeLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/search_bg"
-        android:iconifiedByDefault="false"
-        android:queryBackground="@null"
-        android:queryHint="Followers"
-        android:searchIcon="@drawable/ic_search"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/backImageView"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="12dp"
+        android:background="@drawable/search_bg">
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:iconifiedByDefault="false"
+            android:queryBackground="@null"
+            android:queryHint="All Followers"
+            android:searchIcon="@drawable/ic_search">
+
+        </SearchView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="15dp"
+            android:text="Search"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/orange"
+            android:textSize="15sp"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
 
     <TextView
         android:layout_width="wrap_content"

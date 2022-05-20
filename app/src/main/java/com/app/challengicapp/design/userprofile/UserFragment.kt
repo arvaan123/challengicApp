@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import com.app.challengicapp.R
+import com.app.challengicapp.design.home.HomeActivity
 import com.app.challengicapp.design.userprofile.userchipgroup.UserDanceChipFragment
 import com.app.challengicapp.design.userprofile.userchipgroup.UserPopularChipFragment
 import com.app.challengicapp.design.userprofile.userchipgroup.UserSingChipFragment
@@ -70,12 +71,28 @@ class UserFragment : Fragment() {
 
         val llfollowing = view.findViewById<LinearLayout>(R.id.ll_following)
         llfollowing.setOnClickListener {
-            startActivity(Intent(requireActivity(), UserFollowActivity::class.java))
+            //  startActivity(Intent(requireActivity(), UserFollowActivity::class.java))
+
+            val userFrag = UserFollowFragment()
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.container, userFrag).addToBackStack(null).commit()
         }
 
         val llfollowers = view.findViewById<LinearLayout>(R.id.ll_followers)
         llfollowers.setOnClickListener {
-            startActivity(Intent(requireActivity(), UserFollowActivity::class.java))
+            // startActivity(Intent(requireActivity(), UserFollowActivity::class.java))
+
+            val userFrag = UserFollowFragment()
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.container, userFrag).addToBackStack(null).commit()
+        }
+
+
+        val ivclose = view.findViewById<ImageView>(R.id.ivclose)
+        ivclose.setOnClickListener {
+           // startActivity(Intent(requireActivity(), HomeActivity::class.java))
+
+            requireActivity().finish()
         }
         return view
     }
@@ -87,7 +104,7 @@ class UserFragment : Fragment() {
         val ll_edit_profile = bottomSheetDialog.findViewById<LinearLayout>(R.id.ll_edit_profile)
 
         ll_edit_profile?.setOnClickListener {
-            startActivity(Intent(requireActivity(), EditProfile::class.java))
+            startActivity(Intent(requireActivity(), EditProfileActivity::class.java))
 
         }
 

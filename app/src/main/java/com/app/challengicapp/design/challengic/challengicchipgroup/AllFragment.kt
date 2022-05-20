@@ -143,7 +143,7 @@ class AllFragment : Fragment() {
         val adapter = ChallengicAdap(requireActivity(), alldatalist)
         allrv.adapter = adapter
         adapter.notifyDataSetChanged()
-        adapter.notifyItemChanged(0)
+        //adapter.notifyItemChanged(0)
 
         return view
     }

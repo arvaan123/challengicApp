@@ -33,6 +33,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_marginHorizontal="10dp"
+
             android:background="@drawable/bottom_bg"
             android:gravity="center"
             android:orientation="vertical">
@@ -44,7 +46,7 @@
                 android:padding="20dp"
                 android:text="Share"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="15sp" />
 
 
         </LinearLayout>
@@ -56,6 +58,8 @@
             android:layout_weight="1"
             android:background="@drawable/bottom_bg"
             android:gravity="center"
+            android:layout_marginHorizontal="10dp"
+
             android:orientation="vertical">
 
 
@@ -65,7 +69,7 @@
                 android:padding="20dp"
                 android:text="Link"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="15sp" />
 
 
         </LinearLayout>
@@ -78,6 +82,7 @@
             android:layout_weight="1"
             android:background="@drawable/bottom_bg"
             android:gravity="center"
+            android:layout_marginHorizontal="10dp"
             android:orientation="vertical">
 
 
@@ -87,7 +92,7 @@
                 android:padding="20dp"
                 android:text="Report"
                 android:textColor="#F30E0E"
-                android:textSize="18sp" />
+                android:textSize="15sp" />
 
 
         </LinearLayout>
