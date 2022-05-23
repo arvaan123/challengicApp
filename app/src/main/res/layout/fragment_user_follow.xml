@@ -61,6 +61,7 @@
 
     </androidx.viewpager.widget.ViewPager>
 
+<!--
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
@@ -78,6 +79,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/menu_bottom" />
+-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

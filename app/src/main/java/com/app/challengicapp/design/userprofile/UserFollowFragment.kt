@@ -51,7 +51,7 @@ class UserFollowFragment : Fragment() {
 
         tab.setupWithViewPager(pager)
 
-        bottomNavigation = view.findViewById(R.id.bottomNavigation) as BottomNavigationView
+      //  bottomNavigation = view.findViewById(R.id.bottomNavigation) as BottomNavigationView
 
 
 //        bottomNavigation.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener { item ->
@@ -84,7 +84,7 @@ class UserFollowFragment : Fragment() {
 //            false
 //        })
 
-        bottomNavigation.setSelectedItemId(R.id.challengic);
+        //bottomNavigation.setSelectedItemId(R.id.challengic);
 
         return view
     }
