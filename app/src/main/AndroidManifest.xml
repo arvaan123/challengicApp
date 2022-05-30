@@ -11,6 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ChallengicApp">
+
+        <activity android:name=".design.notification.NotificationActivity"
+            android:exported="true"/>
         <activity
             android:name=".design.userprofile.UserFollowActivity"
             android:windowSoftInputMode="adjustPan" />
