@@ -1,5 +1,6 @@
 package com.app.challengicapp.design.challengic
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,8 +9,11 @@ import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import com.app.challengicapp.R
 import com.app.challengicapp.design.challengic.challengicchipgroup.*
+import com.app.challengicapp.design.login.LoginActivity
+import com.app.challengicapp.design.notification.NotificationActivity
 import com.app.challengicapp.design.userprofile.UserFragment
 import com.google.android.material.chip.Chip
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class ChallengicFragment : Fragment() { 
@@ -83,6 +87,11 @@ class ChallengicFragment : Fragment() {
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.container, userFrag).addToBackStack(null).commit()
 
+        }
+
+        val fabNotification=view.findViewById<FloatingActionButton>(R.id.fabNotification)
+        fabNotification.setOnClickListener {
+            startActivity(Intent(requireActivity(), NotificationActivity::class.java))
         }
 
         return view

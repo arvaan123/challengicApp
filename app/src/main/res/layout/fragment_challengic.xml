@@ -31,7 +31,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab_notification"
+            android:id="@+id/fabNotification"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="7dp"
@@ -49,7 +49,7 @@
             android:layout_height="60dp"
             android:src="@drawable/user_profile"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintLeft_toRightOf="@+id/fab_notification"
+            app:layout_constraintLeft_toRightOf="@+id/fabNotification"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
