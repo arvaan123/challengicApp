@@ -6,7 +6,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter
 
 
 class UserViewPagerAdapter(supportFragmentManager: FragmentManager) :
-    FragmentStatePagerAdapter(supportFragmentManager) {
+     FragmentStatePagerAdapter(supportFragmentManager) {
 
     // declare arrayList to contain fragments and its title
     private val mFragmentList = ArrayList<Fragment>()

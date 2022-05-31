@@ -12,7 +12,7 @@ import com.bumptech.glide.Glide
 import de.hdodenhof.circleimageview.CircleImageView
 
 class UserFollowingAdap(private val context: Context, private val mList: List<UserFollowModel>) :
-    RecyclerView.Adapter<UserFollowingAdap.ViewHolder>() {
+     RecyclerView.Adapter<UserFollowingAdap.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)

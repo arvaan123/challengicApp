@@ -15,7 +15,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.tabs.TabLayout
 
 
-class UserFollowFragment : Fragment() {
+class UserFollowFragment : Fragment() { 
     lateinit var bottomNavigation: BottomNavigationView
     lateinit var backiv: ImageView
 

@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.app.challengicapp.R
 import com.app.challengicapp.design.login.LoginActivity
 
-class SignUpActivity : AppCompatActivity() {
+class SignUpActivity : AppCompatActivity() { 
 
     private lateinit var etSignUpPassword: EditText
     private lateinit var ivSignUpHidePassword: ImageView

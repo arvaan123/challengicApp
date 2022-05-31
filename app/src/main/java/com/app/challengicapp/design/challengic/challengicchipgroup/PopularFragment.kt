@@ -12,7 +12,7 @@ import com.app.challengicapp.design.challengic.ChallengicAdap
 import com.app.challengicapp.design.challengic.ChallengicModel
 
 
-class PopularFragment : Fragment() {
+class PopularFragment : Fragment() { 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

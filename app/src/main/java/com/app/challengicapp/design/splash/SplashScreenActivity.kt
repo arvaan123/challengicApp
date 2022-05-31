@@ -9,7 +9,7 @@ import com.app.challengicapp.R
 import com.app.challengicapp.design.categories.CategoriesActivity
 import com.app.challengicapp.design.login.LoginActivity
 
-class SplashScreenActivity : AppCompatActivity() {
+class SplashScreenActivity : AppCompatActivity() { 
 
     private lateinit var mHandler: Handler
     private lateinit var mRunnable: Runnable

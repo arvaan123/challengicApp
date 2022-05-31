@@ -14,7 +14,7 @@ import com.bumptech.glide.Glide
 import de.hdodenhof.circleimageview.CircleImageView
 
 class LaderboardAdap(private val context: Context, private val mList: List<LaderboardModel>) :
-    RecyclerView.Adapter<LaderboardAdap.ViewHolder>() {
+     RecyclerView.Adapter<LaderboardAdap.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)

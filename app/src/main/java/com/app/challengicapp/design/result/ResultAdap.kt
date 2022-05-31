@@ -11,7 +11,7 @@ import com.bumptech.glide.Glide
 import de.hdodenhof.circleimageview.CircleImageView
 
 class ResultAdap(private val context: Context, private val result_list: List<ResultModel>) :
-    RecyclerView.Adapter<ResultAdap.ViewHolder>() {
+     RecyclerView.Adapter<ResultAdap.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)

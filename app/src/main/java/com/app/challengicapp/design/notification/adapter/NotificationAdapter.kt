@@ -10,7 +10,7 @@ import de.hdodenhof.circleimageview.CircleImageView
 
 
 class NotificationAdapter(val context: Context) :
-    RecyclerView.Adapter<NotificationAdapter.NotificationViewHolder>() {
+     RecyclerView.Adapter<NotificationAdapter.NotificationViewHolder>() {
 
 
     class NotificationViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

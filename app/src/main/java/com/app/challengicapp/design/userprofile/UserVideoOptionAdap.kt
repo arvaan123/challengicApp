@@ -23,7 +23,7 @@ class UserVideoOptionAdap(
     private val context: Context,
     private val uservideoList: List<UserVideoOptionModel>
 ) :
-    RecyclerView.Adapter<UserVideoOptionAdap.ViewHolder>() {
+     RecyclerView.Adapter<UserVideoOptionAdap.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 

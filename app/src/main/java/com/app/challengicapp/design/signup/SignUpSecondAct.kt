@@ -7,7 +7,7 @@ import android.widget.TextView
 import com.app.challengicapp.R
 import com.app.challengicapp.design.login.LoginActivity
 
-class SignUpSecondAct : AppCompatActivity() {
+class SignUpSecondAct : AppCompatActivity() { 
 
     lateinit var tvContinue: TextView
 

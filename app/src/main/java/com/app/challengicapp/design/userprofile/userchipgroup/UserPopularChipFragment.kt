@@ -13,7 +13,7 @@ import com.app.challengicapp.design.challengic.ChallengicModel
 import com.app.challengicapp.design.userprofile.UserVideoOptionAdap
 import com.app.challengicapp.design.userprofile.UserVideoOptionModel
 
-class UserPopularChipFragment : Fragment() {
+class UserPopularChipFragment : Fragment() { 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

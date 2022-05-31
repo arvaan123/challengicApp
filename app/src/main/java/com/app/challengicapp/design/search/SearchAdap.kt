@@ -10,7 +10,7 @@ import com.app.challengicapp.R
 import com.bumptech.glide.Glide
 
 class SearchAdap(private val context: Context, private val searchList: List<SearchModel>) :
-    RecyclerView.Adapter<SearchAdap.ViewHolder>() {
+     RecyclerView.Adapter<SearchAdap.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 

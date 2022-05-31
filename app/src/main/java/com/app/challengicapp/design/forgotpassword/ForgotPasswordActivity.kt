@@ -8,7 +8,7 @@ import com.app.challengicapp.R
 import com.app.challengicapp.design.forgotpasswordsecond.ForgotPasswordSecondActivity
 import com.app.challengicapp.design.login.LoginActivity
 
-class ForgotPasswordActivity : AppCompatActivity() {
+class ForgotPasswordActivity : AppCompatActivity() { 
     lateinit var tvFpBackToLogin: TextView
     lateinit var tvFpSubmit: TextView
     override fun onCreate(savedInstanceState: Bundle?) {

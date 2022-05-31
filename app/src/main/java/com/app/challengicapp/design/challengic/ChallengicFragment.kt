@@ -12,7 +12,7 @@ import com.app.challengicapp.design.userprofile.UserFragment
 import com.google.android.material.chip.Chip
 
 
-class ChallengicFragment : Fragment() {
+class ChallengicFragment : Fragment() { 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

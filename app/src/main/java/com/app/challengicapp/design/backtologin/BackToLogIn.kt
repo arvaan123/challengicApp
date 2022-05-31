@@ -7,7 +7,7 @@ import android.widget.TextView
 import com.app.challengicapp.R
 import com.app.challengicapp.design.login.LoginActivity
 
-class BackToLogIn : AppCompatActivity() {
+class BackToLogIn : AppCompatActivity() { 
 
     lateinit var tvBacktoLogin: TextView
 

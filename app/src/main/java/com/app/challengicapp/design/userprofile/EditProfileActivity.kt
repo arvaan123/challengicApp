@@ -9,7 +9,7 @@ import com.app.challengicapp.design.userprofile.userchipgroup.UserSportsChipFrag
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
 
-class EditProfileActivity : AppCompatActivity() {
+class EditProfileActivity : AppCompatActivity() { 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_profile)

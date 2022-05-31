@@ -14,7 +14,7 @@ import com.app.challengicapp.design.userprofile.UserVideoOptionAdap
 import com.app.challengicapp.design.userprofile.UserVideoOptionModel
 
 
-class UserSingChipFragment : Fragment() {
+class UserSingChipFragment : Fragment() { 
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -22,7 +22,7 @@ class ChallengicAdap(
     private val context: Context,
     private val challengicList: List<ChallengicModel>
 ) :
-    RecyclerView.Adapter<ChallengicAdap.ViewHolder>() {
+     RecyclerView.Adapter<ChallengicAdap.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 

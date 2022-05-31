@@ -8,7 +8,7 @@ import com.app.challengicapp.R
 import com.app.challengicapp.design.backtologin.BackToLogIn
 import com.app.challengicapp.design.login.LoginActivity
 
-class ForgotPasswordSecondActivity : AppCompatActivity() {
+class ForgotPasswordSecondActivity : AppCompatActivity() { 
 
     lateinit var tvFpsSubmit: TextView
 

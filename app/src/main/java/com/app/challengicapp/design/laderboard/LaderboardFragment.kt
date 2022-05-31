@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.app.challengicapp.R
 
-class LaderboardFragment : Fragment() {
+class LaderboardFragment : Fragment() { 
 
     val data = listOf(
         LaderboardModel(R.drawable.u1, R.drawable.cf3, "Tina", "1367 votes", "1st"),
@@ -69,7 +69,7 @@ class LaderboardFragment : Fragment() {
         val recyclerview = view.findViewById<RecyclerView>(R.id.laderboard_rv)
         recyclerview.setHasFixedSize(false)
         recyclerview.layoutManager = LinearLayoutManager(requireActivity())
-        recyclerview.adapter = LaderboardAdap(requireActivity(), data)
+         RecyclerView.Adapter = LaderboardAdap(requireActivity(), data)
 
         val backiv=view.findViewById<ImageView>(R.id.backiv)
         backiv.setOnClickListener {

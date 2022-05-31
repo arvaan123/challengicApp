@@ -1,3 +1,3 @@
 package com.app.challengicapp.design.search
 
-data class SearchModel(val searchpageIV: Int)
+ data class SearchModel(val searchpageIV: Int)

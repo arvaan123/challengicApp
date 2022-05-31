@@ -11,7 +11,7 @@ import com.app.challengicapp.R
 import com.app.challengicapp.design.challengic.ChallengicAdap
 import com.app.challengicapp.design.challengic.ChallengicModel
 
-class DanceFragment : Fragment() {
+class DanceFragment : Fragment() { 
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

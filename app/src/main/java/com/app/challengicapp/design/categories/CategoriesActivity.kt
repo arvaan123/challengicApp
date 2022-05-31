@@ -11,7 +11,7 @@ import com.app.challengicapp.design.login.LoginActivity
 import com.app.challengicapp.design.search.SearchAdap
 import com.app.challengicapp.design.search.SearchModel
 
-class CategoriesActivity : AppCompatActivity() {
+class CategoriesActivity : AppCompatActivity() { 
 
     lateinit var tvContinue: TextView
 

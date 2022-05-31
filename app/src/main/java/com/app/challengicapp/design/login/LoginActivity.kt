@@ -9,7 +9,7 @@ import com.app.challengicapp.design.forgotpassword.ForgotPasswordActivity
 import com.app.challengicapp.design.home.HomeActivity
 import com.app.challengicapp.design.signup.SignUpActivity
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() { 
     private lateinit var tvLoginRegisterNow: TextView
     private lateinit var tvLoginForgotPassword: TextView
     private lateinit var tvLoginButtonLogin: TextView

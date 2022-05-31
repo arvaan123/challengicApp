@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.app.challengicapp.R
 
 
-class ResultPageFragment : Fragment() {
+class ResultPageFragment : Fragment() { 
 
     val data = listOf(
         ResultModel(R.drawable.u1, "Tina", "554 votes", "4th"),

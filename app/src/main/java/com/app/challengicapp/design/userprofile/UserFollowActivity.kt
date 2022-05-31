@@ -7,7 +7,7 @@ import androidx.fragment.app.FragmentTransaction
 import com.app.challengicapp.R
 
 
-class UserFollowActivity : AppCompatActivity() {
+class UserFollowActivity : AppCompatActivity() { 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

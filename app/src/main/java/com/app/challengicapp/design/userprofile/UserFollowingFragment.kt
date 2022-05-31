@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.app.challengicapp.R
 
-class UserFollowingFragment : Fragment() {
+class UserFollowingFragment : Fragment() { 
 
     val data = listOf(
         UserFollowModel(R.drawable.u1, R.drawable.cf3, "Tina", "1367 votes"),

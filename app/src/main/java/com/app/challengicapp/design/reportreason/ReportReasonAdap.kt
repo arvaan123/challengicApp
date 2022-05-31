@@ -14,7 +14,7 @@ class ReportReasonAdap(
     private val context: Context,
     private val report_list: List<ReportReasonModel>
 ) :
-    RecyclerView.Adapter<ReportReasonAdap.ViewHolder>() {
+     RecyclerView.Adapter<ReportReasonAdap.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
