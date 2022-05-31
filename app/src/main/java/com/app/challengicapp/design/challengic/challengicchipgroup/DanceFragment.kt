@@ -26,8 +26,8 @@ class DanceFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_dance, container, false)
 
-        val dancerv = view.findViewById<RecyclerView>(R.id.dancerv)
-        val dancedatalist = listOf(
+        val rvDance = view.findViewById<RecyclerView>(R.id.rvDance)
+        val danceDataList = listOf(
             ChallengicModel(R.drawable.d5, R.drawable.u2, "#indiandance #art #classical"),
 
             ChallengicModel(R.drawable.d1, R.drawable.u1, "#dancestudio #dancetime #hiphopdance"),
@@ -64,10 +64,10 @@ class DanceFragment : Fragment() {
 
         val layoutManager: RecyclerView.LayoutManager =
             StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-        dancerv.setLayoutManager(layoutManager)
-        val adapter = ChallengicAdap(requireActivity(), dancedatalist)
-        dancerv.adapter = adapter
-        adapter.notifyDataSetChanged()
+        rvDance.setLayoutManager(layoutManager)
+        val challengicAdap = ChallengicAdap(requireActivity(), danceDataList)
+        rvDance.adapter = challengicAdap
+        challengicAdap.notifyDataSetChanged()
 
         return view
     }

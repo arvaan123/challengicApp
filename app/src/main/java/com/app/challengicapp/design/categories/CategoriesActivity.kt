@@ -8,8 +8,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.app.challengicapp.R
 import com.app.challengicapp.design.login.LoginActivity
-import com.app.challengicapp.design.search.SearchAdap
-import com.app.challengicapp.design.search.SearchModel
 
 class CategoriesActivity : AppCompatActivity() { 
 
@@ -21,7 +19,7 @@ class CategoriesActivity : AppCompatActivity() {
 
         val rvCategories = findViewById<RecyclerView>(R.id.rvCategories)
 
-        val categorydata = listOf(
+        val categoryData = listOf(
             CategoriesModel(R.drawable.d2, "Dance"),
             CategoriesModel(R.drawable.m8, "Sing"),
             CategoriesModel(R.drawable.s1, "Sports"),
@@ -39,8 +37,8 @@ class CategoriesActivity : AppCompatActivity() {
         val gridLayoutManager =
             GridLayoutManager(this, 3, GridLayoutManager.VERTICAL, false)
         rvCategories.layoutManager = gridLayoutManager
-        val catadapter = CategoriesAdap(this, categorydata)
-        rvCategories.adapter = catadapter
+        val catAdapter = CategoriesAdap(this, categoryData)
+        rvCategories.adapter = catAdapter
 
         tvContinue = findViewById(R.id.tvContinue)
         tvContinue.setOnClickListener {

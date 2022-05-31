@@ -1,3 +1,3 @@
 package com.app.challengicapp.design.categories
 
- data class CategoriesModel(val categoryimage: Int, val categoryname: String)
+ data class CategoriesModel(val categoryImage: Int, val categoryName: String)

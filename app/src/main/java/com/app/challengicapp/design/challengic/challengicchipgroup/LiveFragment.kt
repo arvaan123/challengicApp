@@ -11,7 +11,7 @@ import com.app.challengicapp.R
 import com.app.challengicapp.design.challengic.ChallengicAdap
 import com.app.challengicapp.design.challengic.ChallengicModel
 
-class LiveFragment : Fragment() { 
+class LiveFragment : Fragment() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,8 +25,8 @@ class LiveFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_live, container, false)
 
-        val liverv = view.findViewById<RecyclerView>(R.id.liverv)
-        val livedatalist = listOf(
+        val rvLive = view.findViewById<RecyclerView>(R.id.rvLive)
+        val liveDataList = listOf(
             ChallengicModel(R.drawable.l1, R.drawable.u1, "#live #photography"),
             ChallengicModel(R.drawable.l2, R.drawable.u2, "#enjoylife #enjoythemoment "),
             ChallengicModel(
@@ -51,10 +51,10 @@ class LiveFragment : Fragment() {
 
         val layoutManager: RecyclerView.LayoutManager =
             StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-        liverv.setLayoutManager(layoutManager)
-        val adapter = ChallengicAdap(requireActivity(), livedatalist)
-        liverv.adapter = adapter
-        adapter.notifyDataSetChanged()
+        rvLive.setLayoutManager(layoutManager)
+        val challengicAdap = ChallengicAdap(requireActivity(), liveDataList)
+        rvLive.adapter = challengicAdap
+        challengicAdap.notifyDataSetChanged()
 
         return view
     }

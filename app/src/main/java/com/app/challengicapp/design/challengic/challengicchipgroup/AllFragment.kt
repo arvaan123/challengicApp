@@ -25,8 +25,8 @@ class AllFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_all, container, false)
 
-        val allrv = view.findViewById<RecyclerView>(R.id.allrv)
-        val alldatalist = listOf(
+        val rvAll = view.findViewById<RecyclerView>(R.id.rvAll)
+        val allDataList = listOf(
             ChallengicModel(R.drawable.d5, R.drawable.u2, "#indiandance #art #classical"),
 
             ChallengicModel(R.drawable.d1, R.drawable.u1, "#dancestudio #dancetime #hiphopdance"),
@@ -139,9 +139,9 @@ class AllFragment : Fragment() {
 
         val layoutManager: RecyclerView.LayoutManager =
             StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-        allrv.setLayoutManager(layoutManager)
-        val adapter = ChallengicAdap(requireActivity(), alldatalist)
-        allrv.adapter = adapter
+        rvAll.setLayoutManager(layoutManager)
+        val adapter = ChallengicAdap(requireActivity(), allDataList)
+        rvAll.adapter = adapter
         adapter.notifyDataSetChanged()
         //adapter.notifyItemChanged(0)
 

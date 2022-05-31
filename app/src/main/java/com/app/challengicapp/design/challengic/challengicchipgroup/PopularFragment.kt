@@ -26,8 +26,8 @@ class PopularFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_popular, container, false)
 
-        val popularrv = view.findViewById<RecyclerView>(R.id.popularrv)
-        val populardatalist = listOf(
+        val rvPopular = view.findViewById<RecyclerView>(R.id.rvPopular)
+        val popularDataList = listOf(
             ChallengicModel(R.drawable.p1, R.drawable.u2, "#picture #loading"),
 
             ChallengicModel(R.drawable.p2, R.drawable.u1, "#picoftheday #like #nature"),
@@ -52,10 +52,10 @@ class PopularFragment : Fragment() {
 
         val layoutManager: RecyclerView.LayoutManager =
             StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-        popularrv.setLayoutManager(layoutManager)
-        val adapter = ChallengicAdap(requireActivity(), populardatalist)
-        popularrv.adapter = adapter
-        adapter.notifyDataSetChanged()
+        rvPopular.setLayoutManager(layoutManager)
+        val challengicAdap = ChallengicAdap(requireActivity(), popularDataList)
+        rvPopular.adapter = challengicAdap
+        challengicAdap.notifyDataSetChanged()
 
         return view
     }
