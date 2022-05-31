@@ -44,7 +44,7 @@
         android:layout_marginVertical="15dp"
         android:text="Following"
         android:textColor="@color/black"
-        android:textSize="20sp" />
+        android:textSize="@dimen/_15sdp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/followingrv"
