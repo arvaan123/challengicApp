@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,182 +8,245 @@
     tools:context=".design.userprofile.activity.EditProfileActivity">
 
     <View
+        android:id="@+id/viewEtProfile"
         android:layout_width="match_parent"
-        android:layout_height="30dp" />
+        android:layout_height="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tvCancel"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="3">
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:padding="@dimen/_10sdp"
+        android:text="Cancel"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewEtProfile" />
 
-        <TextView
-            android:id="@+id/tvCancel"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="10dp"
-            android:text="Cancel"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tvEditProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:text="Edit Profile"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/tvCancel"
+        app:layout_constraintRight_toLeftOf="@+id/tvDone"
+        app:layout_constraintTop_toBottomOf="@+id/viewEtProfile" />
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="10dp"
-            android:text="Edit Profile"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="10dp"
-            android:text="Done"
-            android:textAlignment="textEnd"
-            android:textColor="@color/orange"
-            android:textSize="18sp"
-            android:textStyle="normal" />
-
-    </LinearLayout>
+    <TextView
+        android:id="@+id/tvDone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_weight="1"
+        android:padding="@dimen/_10sdp"
+        android:text="Done"
+        android:textAlignment="textEnd"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/tvEditProfile"
+        app:layout_constraintTop_toBottomOf="@+id/viewEtProfile" />
 
 
-    <LinearLayout
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivUser"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_75sdp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:src="@drawable/user_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDone" />
+
+    <TextView
+        android:id="@+id/tvChangeProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginVertical="20dp"
-        android:orientation="vertical">
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/ivUser"
-            android:layout_width="90dp"
-            android:layout_height="75dp"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="10dp"
-            android:src="@drawable/user_profile" />
-
-        <TextView
-            android:id="@+id/tvChangeProfile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
-            android:text="Change profile photo"
-            android:textColor="@color/orange"
-            android:textSize="20sp" />
-
-
-    </LinearLayout>
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:text="Change profile photo"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivUser" />
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/viewEtProfile1"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#d2d2d2" />
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:background="#d2d2d2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvChangeProfile" />
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conLayEditProfile1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="35dp"
-        android:orientation="horizontal"
-        android:padding="10dp">
+        android:layout_marginHorizontal="@dimen/_20sdp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewEtProfile1">
 
         <TextView
+            android:id="@+id/tvName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Name              "
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:layout_width="match_parent"
+            android:id="@+id/etName"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Your name" />
-    </LinearLayout>
+            android:hint="Your name"
+            android:textSize="@dimen/_15sdp"
 
-    <LinearLayout
+            app:layout_constraintLeft_toRightOf="@+id/tvName"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conLayEditProfile2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="35dp"
-        android:orientation="horizontal"
-        android:padding="10dp">
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conLayEditProfile1">
+
 
         <TextView
+            android:id="@+id/tvUserName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Username       "
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:layout_width="match_parent"
+            android:id="@+id/etUserName"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Username" />
-    </LinearLayout>
+            android:hint="Username"
+            android:textSize="@dimen/_15sdp"
 
-    <LinearLayout
+            app:layout_constraintLeft_toRightOf="@+id/tvUserName"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conLayEditProfile3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="35dp"
-        android:orientation="horizontal"
-        android:padding="10dp">
+        android:layout_marginHorizontal="@dimen/_20sdp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conLayEditProfile2">
 
         <TextView
+            android:id="@+id/tvLocation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Location          "
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:layout_width="match_parent"
+            android:id="@+id/etLoction"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Location" />
-    </LinearLayout>
+            android:hint="Location"
+            android:textSize="@dimen/_15sdp"
 
-    <LinearLayout
+            app:layout_constraintLeft_toRightOf="@+id/tvLocation"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conLayEditProfile4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="35dp"
-        android:orientation="horizontal"
-        android:padding="10dp">
+        android:layout_marginHorizontal="@dimen/_20sdp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conLayEditProfile3">
 
         <TextView
+            android:id="@+id/tvPronous"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pronous          "
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:layout_width="match_parent"
+            android:id="@+id/etPronous"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Pronous" />
-    </LinearLayout>
+            android:hint="Pronous"
+            android:textSize="@dimen/_15sdp"
 
-    <LinearLayout
+            app:layout_constraintLeft_toRightOf="@+id/tvPronous"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conLayEditProfile5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="35dp"
-        android:orientation="horizontal"
-        android:padding="10dp">
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conLayEditProfile4">
 
         <TextView
+            android:id="@+id/tvBio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Bio                   "
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:layout_width="match_parent"
+            android:id="@+id/etBio"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Bio" />
-    </LinearLayout>
+            android:hint="Bio"
+            android:textSize="@dimen/_15sdp"
+
+            app:layout_constraintLeft_toRightOf="@+id/tvBio"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
