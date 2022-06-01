@@ -15,9 +15,9 @@
         <activity android:name=".design.notification.NotificationActivity"
             android:exported="true"/>
         <activity
-            android:name=".design.userprofile.UserFollowActivity"
+            android:name=".design.userprofile.activity.UserFollowActivity"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".design.userprofile.EditProfileActivity" />
+        <activity android:name=".design.userprofile.activity.EditProfileActivity" />
         <activity
             android:name=".design.home.HomeActivity"
             android:exported="false"
