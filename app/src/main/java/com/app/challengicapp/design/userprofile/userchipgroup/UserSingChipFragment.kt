@@ -8,10 +8,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.app.challengicapp.R
-import com.app.challengicapp.design.challengic.ChallengicAdap
-import com.app.challengicapp.design.challengic.ChallengicModel
-import com.app.challengicapp.design.userprofile.UserVideoOptionAdap
-import com.app.challengicapp.design.userprofile.UserVideoOptionModel
+import com.app.challengicapp.design.userprofile.adapter.UserVideoOptionAdap
+import com.app.challengicapp.design.userprofile.modelclass.UserVideoOptionModel
 
 
 class UserSingChipFragment : Fragment() { 
@@ -28,8 +26,8 @@ class UserSingChipFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_user_sing_chip, container, false)
 
-        val usingrv = view.findViewById<RecyclerView>(R.id.usingrv)
-        val singdatalist = listOf(
+        val uSingRv = view.findViewById<RecyclerView>(R.id.rvUserChipSing)
+        val singDataList = listOf(
             UserVideoOptionModel(R.drawable.m1, R.drawable.u1, "#musicnotes #music"),
             UserVideoOptionModel(R.drawable.m2, R.drawable.u2, "#headphones #lyrics"),
             UserVideoOptionModel(R.drawable.m7, R.drawable.result_user_profile2, "#music #igmusic"),
@@ -48,10 +46,10 @@ class UserSingChipFragment : Fragment() {
 
         val layoutManager: RecyclerView.LayoutManager =
             StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-        usingrv.setLayoutManager(layoutManager)
-        val adapter = UserVideoOptionAdap(requireActivity(), singdatalist)
-        usingrv.adapter = adapter
-        adapter.notifyDataSetChanged()
+        uSingRv.setLayoutManager(layoutManager)
+        val userVideoOptionAdap = UserVideoOptionAdap(requireActivity(), singDataList)
+        uSingRv.adapter = userVideoOptionAdap
+        userVideoOptionAdap.notifyDataSetChanged()
 
         return view    }
 }

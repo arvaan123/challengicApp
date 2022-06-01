@@ -12,7 +12,7 @@ import com.app.challengicapp.R
 
 class ResultPageFragment : Fragment() { 
 
-    val data = listOf(
+    val resultDataList = listOf(
         ResultModel(R.drawable.u1, "Tina", "554 votes", "4th"),
         ResultModel(R.drawable.u2, "Miller", "378 votes", "5th"),
         ResultModel(R.drawable.result_user_profile1, "Kai", "289 votes", "6th"),
@@ -37,9 +37,9 @@ class ResultPageFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_result_page, container, false)
 
-        val result_rv = view.findViewById<RecyclerView>(R.id.result_rv)
-        result_rv.layoutManager = LinearLayoutManager(requireActivity())
-        result_rv.adapter = ResultAdap(requireActivity(), data)
+        val resultRv = view.findViewById<RecyclerView>(R.id.rvResult)
+        resultRv.layoutManager = LinearLayoutManager(requireActivity())
+        resultRv.adapter = ResultAdap(requireActivity(), resultDataList)
 
         return view
     }

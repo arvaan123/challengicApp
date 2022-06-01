@@ -6,7 +6,7 @@
     android:layout_margin="15dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraint"
+        android:id="@+id/clUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -14,7 +14,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/backiv"
+            android:id="@+id/ivUserBack"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:src="@drawable/ic_back"
@@ -22,7 +22,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_title"
+            android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
@@ -31,19 +31,19 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/backiv"
+            app:layout_constraintStart_toEndOf="@+id/ivUserBack"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabs"
+        android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/viewPager"
+        app:layout_constraintBottom_toTopOf="@+id/vpUserFollow"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraint"
+        app:layout_constraintTop_toBottomOf="@+id/clUser"
         app:tabGravity="fill"
         app:tabIndicatorColor="@color/black"
         app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
@@ -51,35 +51,14 @@
         app:tabTextColor="@android:color/black" />
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewPager"
+        android:id="@+id/vpUserFollow"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tabs">
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout">
 
     </androidx.viewpager.widget.ViewPager>
-
-    <!--
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigation"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_gravity="bottom"
-            android:layout_margin="30dp"
-            android:background="@drawable/nav_bg"
-            android:clipToPadding="false"
-            app:elevation="20dp"
-            app:itemIconSize="30dp"
-            app:itemIconTint="@drawable/item_selector"
-            app:labelVisibilityMode="unlabeled"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:menu="@menu/menu_bottom" />
-    -->
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

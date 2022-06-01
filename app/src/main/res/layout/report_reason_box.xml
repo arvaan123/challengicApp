@@ -7,7 +7,7 @@
     android:background="@drawable/report_msg_bg">
 
     <RelativeLayout
-        android:id="@+id/rl_report"
+        android:id="@+id/rlReport"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="15dp"
@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/tv_report"
+            android:id="@+id/tvReport"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -25,7 +25,7 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/closeiv"
+            android:id="@+id/imageClose"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -38,10 +38,10 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#d2d2d2"
-        app:layout_constraintTop_toBottomOf="@+id/rl_report" />
+        app:layout_constraintTop_toBottomOf="@+id/rlReport" />
 
     <TextView
-        android:id="@+id/tv_report_reason"
+        android:id="@+id/tvReportReason"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="15dp"
@@ -56,10 +56,10 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#d2d2d2"
-        app:layout_constraintTop_toBottomOf="@+id/tv_report_reason" />
+        app:layout_constraintTop_toBottomOf="@+id/tvReportReason" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/reportrv"
+        android:id="@+id/rvReport"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintTop_toBottomOf="@+id/view1" />

@@ -22,9 +22,9 @@ class SearchAdap(private val context: Context, private val searchList: List<Sear
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        val SearchModel = searchList[position]
+        val searchModel = searchList[position]
 
-        Glide.with(context).load(SearchModel.searchpageIV).into(holder.searchpageIV);
+        Glide.with(context).load(searchModel.searchpageIV).into(holder.ivSearchpage);
 
     }
 
@@ -33,7 +33,7 @@ class SearchAdap(private val context: Context, private val searchList: List<Sear
     }
 
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
-        val searchpageIV: ImageView = itemView.findViewById(R.id.searchpageIV)
+        val ivSearchpage: ImageView = itemView.findViewById(R.id.ivSearchpage)
 
     }
 }

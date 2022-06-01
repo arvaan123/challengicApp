@@ -5,7 +5,6 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.Window
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -22,7 +21,7 @@ class ChallengicAdap(
     private val context: Context,
     private val challengicList: List<ChallengicModel>
 ) :
-     RecyclerView.Adapter<ChallengicAdap.ViewHolder>() {
+    RecyclerView.Adapter<ChallengicAdap.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
@@ -34,14 +33,14 @@ class ChallengicAdap(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        val PostModel = challengicList[position]
+        val challengicModel = challengicList[position]
 
-        Glide.with(context).load(PostModel.image).into(holder.ImageCategory);
-        Glide.with(context).load(PostModel.userImage).into(holder.userImage);
+        Glide.with(context).load(challengicModel.image).into(holder.ivCategory);
+        Glide.with(context).load(challengicModel.userImage).into(holder.cIvUser);
 
-        holder.tvtags.setText(PostModel.tvTag)
+        holder.tvtags.setText(challengicModel.tvTag)
 
-        holder.moreImage.setOnClickListener {
+        holder.imageMore.setOnClickListener {
             showBottomSheetDialog()
         }
 
@@ -53,16 +52,16 @@ class ChallengicAdap(
 
         val tvFollow = bottomSheetDialog.findViewById<TextView>(R.id.tvFollow)
 
-        val tvunFollow = bottomSheetDialog.findViewById<TextView>(R.id.tvunFollow)
+        val tvUnFollow = bottomSheetDialog.findViewById<TextView>(R.id.tvUnFollow)
 
-        tvunFollow?.setOnClickListener {
-            tvunFollow.setVisibility(View.GONE)
+        tvUnFollow?.setOnClickListener {
+            tvUnFollow.setVisibility(View.GONE)
             tvFollow?.setVisibility(View.VISIBLE)
 
         }
 
         tvFollow?.setOnClickListener {
-            tvunFollow?.setVisibility(View.VISIBLE)
+            tvUnFollow?.setVisibility(View.VISIBLE)
             tvFollow.setVisibility(View.GONE)
 
         }
@@ -74,7 +73,7 @@ class ChallengicAdap(
             dialog.setCancelable(false)
             dialog.setContentView(R.layout.report_reason_box)
 
-            val data = listOf(
+            val reportDataList = listOf(
                 ReportReasonModel("It's spam"),
                 ReportReasonModel("Nudity or sexual activities"),
                 ReportReasonModel("Hate speech or symbols"),
@@ -89,12 +88,12 @@ class ChallengicAdap(
                 ReportReasonModel("I just don't like it")
             )
 
-            val reportrv = dialog.findViewById<RecyclerView>(R.id.reportrv)
-            reportrv.layoutManager = LinearLayoutManager(context)
-            reportrv.adapter = ReportReasonAdap(context, data)
+            val rvReport = dialog.findViewById<RecyclerView>(R.id.rvReport)
+            rvReport.layoutManager = LinearLayoutManager(context)
+            rvReport.adapter = ReportReasonAdap(context, reportDataList)
 
 
-            val close = dialog.findViewById<ImageView>(R.id.closeiv)
+            val close = dialog.findViewById<ImageView>(R.id.imageClose)
             close.setOnClickListener {
                 dialog.dismiss()
             }
@@ -119,11 +118,11 @@ class ChallengicAdap(
     }
 
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
-        val ImageCategory: ImageView = itemView.findViewById(R.id.ImageCategory)
-        val userImage: ImageView = itemView.findViewById(R.id.userImage)
-        val tvtags: TextView = itemView.findViewById(R.id.tvtags)
+        val ivCategory: ImageView = itemView.findViewById(R.id.ivCategory)
+        val cIvUser: ImageView = itemView.findViewById(R.id.cIvUser)
+        val tvtags: TextView = itemView.findViewById(R.id.tvTags)
 
-        val moreImage: ImageView = itemView.findViewById(R.id.moreImage)
+        val imageMore: ImageView = itemView.findViewById(R.id.imageMore)
 
     }
 

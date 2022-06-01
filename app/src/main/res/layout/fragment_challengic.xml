@@ -18,7 +18,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/tv_title"
+            android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
@@ -39,12 +39,12 @@
             android:src="@drawable/ic_notification"
             app:backgroundTint="@color/white"
             app:fabCustomSize="40dp"
-            app:layout_constraintRight_toLeftOf="@+id/user_iv"
+            app:layout_constraintRight_toLeftOf="@+id/cIvUserProfile"
             app:layout_constraintTop_toTopOf="parent"
             app:tint="@color/orange" />
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/user_iv"
+            android:id="@+id/cIvUserProfile"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:src="@drawable/user_profile"
@@ -125,7 +125,7 @@
     </HorizontalScrollView>
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/ChipFrag"
+        android:id="@+id/chipFrag"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="15dp"

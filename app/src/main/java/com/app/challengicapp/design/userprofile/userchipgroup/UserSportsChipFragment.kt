@@ -8,18 +8,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.app.challengicapp.R
-import com.app.challengicapp.design.challengic.ChallengicAdap
-import com.app.challengicapp.design.challengic.ChallengicModel
-import com.app.challengicapp.design.userprofile.UserVideoOptionAdap
-import com.app.challengicapp.design.userprofile.UserVideoOptionModel
+import com.app.challengicapp.design.userprofile.adapter.UserVideoOptionAdap
+import com.app.challengicapp.design.userprofile.modelclass.UserVideoOptionModel
 
-class UserSportsChipFragment : Fragment() { 
+class UserSportsChipFragment : Fragment() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
     }
 
     override fun onCreateView(
@@ -29,8 +25,8 @@ class UserSportsChipFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_user_sports_chip, container, false)
 
-        val usportsrv = view.findViewById<RecyclerView>(R.id.usportsrv)
-        val sportsdatalist = listOf(
+        val uSportsRv = view.findViewById<RecyclerView>(R.id.rvUserChipSports)
+        val sportsDataList = listOf(
             UserVideoOptionModel(R.drawable.s1, R.drawable.u2, "#sports #follow #cricket"),
 
             UserVideoOptionModel(R.drawable.s2, R.drawable.u1, "#sport #fitness #like "),
@@ -66,10 +62,10 @@ class UserSportsChipFragment : Fragment() {
 
         val layoutManager: RecyclerView.LayoutManager =
             StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-        usportsrv.setLayoutManager(layoutManager)
-        val adapter = UserVideoOptionAdap(requireActivity(), sportsdatalist)
-        usportsrv.adapter = adapter
-        adapter.notifyDataSetChanged()
+        uSportsRv.setLayoutManager(layoutManager)
+        val userVideoOptionAdap = UserVideoOptionAdap(requireActivity(), sportsDataList)
+        uSportsRv.adapter = userVideoOptionAdap
+        userVideoOptionAdap.notifyDataSetChanged()
 
         return view
     }

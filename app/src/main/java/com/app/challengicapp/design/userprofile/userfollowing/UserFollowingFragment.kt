@@ -1,4 +1,4 @@
-package com.app.challengicapp.design.userprofile
+package com.app.challengicapp.design.userprofile.userfollowing
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,10 +8,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.app.challengicapp.R
+import com.app.challengicapp.design.userprofile.modelclass.UserFollowModel
 
 class UserFollowingFragment : Fragment() { 
 
-    val data = listOf(
+    val uFollowingDataList = listOf(
         UserFollowModel(R.drawable.u1, R.drawable.cf3, "Tina", "1367 votes"),
         UserFollowModel(R.drawable.user_profile, R.drawable.cf2, "Miller", "1298 votes"),
         UserFollowModel(R.drawable.u2, R.drawable.cf7, "Kai", "1088 votes"),
@@ -56,10 +57,10 @@ class UserFollowingFragment : Fragment() {
         // Inflate the layout for this fragment
         val view=inflater.inflate(R.layout.fragment_user_following, container, false)
 
-        val followingrv = view.findViewById<RecyclerView>(R.id.followingrv)
-        followingrv.setHasFixedSize(false)
-        followingrv.layoutManager = LinearLayoutManager(requireActivity())
-        followingrv.adapter = UserFollowingAdap(requireActivity(), data)
+        val rvFollowing = view.findViewById<RecyclerView>(R.id.rvFollowing)
+        rvFollowing.setHasFixedSize(false)
+        rvFollowing.layoutManager = LinearLayoutManager(requireActivity())
+        rvFollowing.adapter = UserFollowingAdap(requireActivity(), uFollowingDataList)
 
         return view
     }

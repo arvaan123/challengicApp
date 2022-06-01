@@ -7,7 +7,7 @@
     android:padding="10dp">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardview"
+        android:id="@+id/cvCategory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="20dp"
@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/ImageCategory"
+            android:id="@+id/ivCategory"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
@@ -24,7 +24,7 @@
 
 
         <ImageView
-            android:id="@+id/moreImage"
+            android:id="@+id/imageMore"
             android:layout_width="@dimen/_15sdp"
             android:layout_height="@dimen/_15sdp"
             android:layout_margin="@dimen/_5sdp"
@@ -41,16 +41,16 @@
         android:layout_marginTop="7dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardview">
+        app:layout_constraintTop_toBottomOf="@+id/cvCategory">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/userImage"
+            android:id="@+id/cIvUser"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_gravity="center" />
 
         <TextView
-            android:id="@+id/tvtags"
+            android:id="@+id/tvTags"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

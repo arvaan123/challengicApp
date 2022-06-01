@@ -6,36 +6,36 @@
     android:layout_margin="15dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/iv_profile_image"
+        android:id="@+id/ivProfileImage"
         android:layout_width="90dp"
         android:layout_height="75dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/r_tv_person_name"
+        android:id="@+id/rTvPersonName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:textColor="@color/black"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/iv_profile_image"
+        app:layout_constraintStart_toEndOf="@+id/ivProfileImage"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/r_tv_votes"
+        android:id="@+id/rTvVotes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:textColor="#8A8888"
         android:textSize="12sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/iv_profile_image"
-        app:layout_constraintTop_toBottomOf="@id/r_tv_person_name" />
+        app:layout_constraintStart_toEndOf="@+id/ivProfileImage"
+        app:layout_constraintTop_toBottomOf="@id/rTvPersonName" />
 
     <TextView
-        android:id="@+id/r_tv_results"
+        android:id="@+id/rTvResults"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
@@ -43,7 +43,7 @@
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/r_tv_votes"
+        app:layout_constraintLeft_toRightOf="@+id/rTvVotes"
         app:layout_constraintTop_toTopOf="parent" />
 
 

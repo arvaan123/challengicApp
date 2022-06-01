@@ -11,7 +11,7 @@ import com.app.challengicapp.R
 import com.app.challengicapp.design.challengic.ChallengicAdap
 import com.app.challengicapp.design.challengic.ChallengicModel
 
-class SportsFragment : Fragment() { 
+class SportsFragment : Fragment() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,10 +25,9 @@ class SportsFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_sports, container, false)
 
-        val sportsrv = view.findViewById<RecyclerView>(R.id.sportsrv)
-        val sportsdatalist = listOf(
+        val rvSports = view.findViewById<RecyclerView>(R.id.rvSports)
+        val sportsDataList = listOf(
             ChallengicModel(R.drawable.s1, R.drawable.u2, "#sports #follow #cricket"),
-
             ChallengicModel(R.drawable.s2, R.drawable.u1, "#sport #fitness #like "),
             ChallengicModel(R.drawable.s3, R.drawable.u2, "#volleyballteam #volleyballplayers"),
             ChallengicModel(
@@ -58,10 +57,10 @@ class SportsFragment : Fragment() {
 
         val layoutManager: RecyclerView.LayoutManager =
             StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-        sportsrv.setLayoutManager(layoutManager)
-        val adapter = ChallengicAdap(requireActivity(), sportsdatalist)
-        sportsrv.adapter = adapter
-        adapter.notifyDataSetChanged()
+        rvSports.setLayoutManager(layoutManager)
+        val challengicAdap = ChallengicAdap(requireActivity(), sportsDataList)
+        rvSports.adapter = challengicAdap
+        challengicAdap.notifyDataSetChanged()
 
         return view
     }

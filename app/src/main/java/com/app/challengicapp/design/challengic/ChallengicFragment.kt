@@ -9,14 +9,13 @@ import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import com.app.challengicapp.R
 import com.app.challengicapp.design.challengic.challengicchipgroup.*
-import com.app.challengicapp.design.login.LoginActivity
 import com.app.challengicapp.design.notification.NotificationActivity
-import com.app.challengicapp.design.userprofile.UserFragment
+import com.app.challengicapp.design.userprofile.fragment.UserFragment
 import com.google.android.material.chip.Chip
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
-class ChallengicFragment : Fragment() { 
+class ChallengicFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,9 +34,9 @@ class ChallengicFragment : Fragment() {
 
         val danceChip = view.findViewById<Chip>(R.id.danceChip)
         danceChip.setOnClickListener {
-            val DanceFrag = DanceFragment()
+            val danceFrag = DanceFragment()
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.ChipFrag, DanceFrag).commit()
+                .replace(R.id.chipFrag, danceFrag).commit()
 
         }
 
@@ -45,51 +44,51 @@ class ChallengicFragment : Fragment() {
         popularChip.setOnClickListener {
             val popularFrag = PopularFragment()
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.ChipFrag, popularFrag).commit()
+                .replace(R.id.chipFrag, popularFrag).commit()
         }
 
         val sportsChip = view.findViewById<Chip>(R.id.sportsChip)
         sportsChip.setOnClickListener {
             val sportsFrag = SportsFragment()
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.ChipFrag, sportsFrag).commit()
+                .replace(R.id.chipFrag, sportsFrag).commit()
         }
 
         val singChip = view.findViewById<Chip>(R.id.singChip)
         singChip.setOnClickListener {
-            val SingFrag = SingFragment()
+            val singFrag = SingFragment()
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.ChipFrag, SingFrag).commit()
+                .replace(R.id.chipFrag, singFrag).commit()
         }
 
         val liveChip = view.findViewById<Chip>(R.id.liveChip)
         liveChip.setOnClickListener {
-            val LiveFrag = LiveFragment()
+            val liveFrag = LiveFragment()
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.ChipFrag, LiveFrag).commit()
+                .replace(R.id.chipFrag, liveFrag).commit()
         }
 
         val allChip = view.findViewById<Chip>(R.id.allChip)
         allChip.setOnClickListener {
-            val AllFrag = AllFragment()
+            val allFrag = AllFragment()
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.ChipFrag, AllFrag).commit()
+                .replace(R.id.chipFrag, allFrag).commit()
         }
 
         val DanceFrag = DanceFragment()
         requireActivity().supportFragmentManager.beginTransaction()
-            .replace(R.id.ChipFrag, DanceFrag).commit()
+            .replace(R.id.chipFrag, DanceFrag).commit()
 
 
-        val user_iv = view.findViewById<ImageView>(R.id.user_iv)
-        user_iv.setOnClickListener {
+        val userIv = view.findViewById<ImageView>(R.id.cIvUserProfile)
+        userIv.setOnClickListener {
             val userFrag = UserFragment()
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.container, userFrag).addToBackStack(null).commit()
 
         }
 
-        val fabNotification=view.findViewById<FloatingActionButton>(R.id.fabNotification)
+        val fabNotification = view.findViewById<FloatingActionButton>(R.id.fabNotification)
         fabNotification.setOnClickListener {
             startActivity(Intent(requireActivity(), NotificationActivity::class.java))
         }

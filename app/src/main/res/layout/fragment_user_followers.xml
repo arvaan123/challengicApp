@@ -46,7 +46,7 @@
         android:textSize="@dimen/_15sdp" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/followersrv"
+        android:id="@+id/rvFollowers"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fadeScrollbars="false"

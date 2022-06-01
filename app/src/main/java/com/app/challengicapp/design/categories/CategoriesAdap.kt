@@ -25,10 +25,10 @@ class CategoriesAdap(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        val CategoriesModel = categoryList[position]
+        val categoriesModel = categoryList[position]
 
-        Glide.with(context).load(CategoriesModel.categoryImage).into(holder.categoryImage);
-        holder.tvCategoriesName.setText(CategoriesModel.categoryName)
+        Glide.with(context).load(categoriesModel.categoryImage).into(holder.cIvCategory);
+        holder.tvCategoriesName.setText(categoriesModel.categoryName)
 
     }
 
@@ -38,7 +38,7 @@ class CategoriesAdap(
 
 
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
-        val categoryImage: ImageView = itemView.findViewById(R.id.categoryImage)
+        val cIvCategory: ImageView = itemView.findViewById(R.id.cIvCategory)
         val tvCategoriesName: TextView = itemView.findViewById(R.id.tvCategoriesName)
     }
 

@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
     <ImageView
-        android:id="@+id/closeiv"
+        android:id="@+id/imageClose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
@@ -19,7 +19,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:id="@+id/tv_report_reason"
+        android:id="@+id/tvReportReason"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="20dp"
@@ -36,10 +36,10 @@
         android:orientation="horizontal"
         android:weightSum="2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_report_msg_box">
+        app:layout_constraintTop_toBottomOf="@+id/etReportMsgBox">
 
         <TextView
-            android:id="@+id/tv_send"
+            android:id="@+id/tvProceed"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -53,7 +53,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tv_go_back"
+            android:id="@+id/tvDecline"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"

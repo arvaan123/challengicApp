@@ -36,7 +36,6 @@
             android:background="@drawable/bottom_bg"
             android:gravity="center"
             android:layout_marginHorizontal="10dp"
-
             android:orientation="vertical">
 
 
@@ -59,9 +58,7 @@
             android:background="@drawable/bottom_bg"
             android:gravity="center"
             android:layout_marginHorizontal="10dp"
-
             android:orientation="vertical">
-
 
             <TextView
                 android:layout_width="wrap_content"
@@ -70,7 +67,6 @@
                 android:text="Link"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
-
 
         </LinearLayout>
 

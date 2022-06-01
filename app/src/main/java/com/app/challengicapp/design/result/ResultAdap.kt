@@ -10,7 +10,7 @@ import com.app.challengicapp.R
 import com.bumptech.glide.Glide
 import de.hdodenhof.circleimageview.CircleImageView
 
-class ResultAdap(private val context: Context, private val result_list: List<ResultModel>) :
+class ResultAdap(private val context: Context, private val resultList: List<ResultModel>) :
      RecyclerView.Adapter<ResultAdap.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -22,28 +22,28 @@ class ResultAdap(private val context: Context, private val result_list: List<Res
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        val ResultModel = result_list[position]
+        val resultModel = resultList[position]
 
         // sets the image to the imageview from our itemHolder class
         //  holder.profile_iv.setImageResource(LaderboardModel.profile_image)
-        holder.r_tv_person_name.setText(ResultModel.r_tv_person_name)
-        holder.r_tv_votes.setText(ResultModel.r_tv_votes)
-        holder.r_tv_results.setText(ResultModel.r_tv_results)
-        Glide.with(context).load(ResultModel.iv_profile_image).into(holder.iv_profile_image);
+        holder.rTvPersonName.setText(resultModel.rTvPersonName)
+        holder.rTvVotes.setText(resultModel.rTvVotes)
+        holder.rTvResults.setText(resultModel.rTvResults)
+        Glide.with(context).load(resultModel.ivProfileImage).into(holder.ivProfileImage);
 
     }
 
     // return the number of the items in the list
     override fun getItemCount(): Int {
-        return result_list.size
+        return resultList.size
     }
 
     // Holds the views for adding it to image and text
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
-        val iv_profile_image: CircleImageView = itemView.findViewById(R.id.iv_profile_image)
-        val r_tv_person_name: TextView = itemView.findViewById(R.id.r_tv_person_name)
-        val r_tv_votes: TextView = itemView.findViewById(R.id.r_tv_votes)
-        val r_tv_results: TextView = itemView.findViewById(R.id.r_tv_results)
+        val ivProfileImage: CircleImageView = itemView.findViewById(R.id.ivProfileImage)
+        val rTvPersonName: TextView = itemView.findViewById(R.id.rTvPersonName)
+        val rTvVotes: TextView = itemView.findViewById(R.id.rTvVotes)
+        val rTvResults: TextView = itemView.findViewById(R.id.rTvResults)
 
     }
 }

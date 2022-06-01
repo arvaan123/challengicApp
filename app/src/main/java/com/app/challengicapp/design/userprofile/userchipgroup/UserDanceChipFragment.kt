@@ -8,10 +8,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.app.challengicapp.R
-import com.app.challengicapp.design.challengic.ChallengicAdap
-import com.app.challengicapp.design.challengic.ChallengicModel
-import com.app.challengicapp.design.userprofile.UserVideoOptionAdap
-import com.app.challengicapp.design.userprofile.UserVideoOptionModel
+import com.app.challengicapp.design.userprofile.adapter.UserVideoOptionAdap
+import com.app.challengicapp.design.userprofile.modelclass.UserVideoOptionModel
 
 class UserDanceChipFragment : Fragment() { 
 
@@ -26,8 +24,8 @@ class UserDanceChipFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_user_dance_chip, container, false)
 
-        val udancerv = view.findViewById<RecyclerView>(R.id.udancerv)
-        val dancedatalist = listOf(
+        val uDanceRv = view.findViewById<RecyclerView>(R.id.rvUserDance)
+        val danceDataList = listOf(
             UserVideoOptionModel(R.drawable.d5, R.drawable.u2, "#indiandance #art #classical"),
 
             UserVideoOptionModel(
@@ -68,10 +66,10 @@ class UserDanceChipFragment : Fragment() {
 
         val layoutManager: RecyclerView.LayoutManager =
             StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-        udancerv.setLayoutManager(layoutManager)
-        val adapter = UserVideoOptionAdap(requireActivity(), dancedatalist)
-        udancerv.adapter = adapter
-        adapter.notifyDataSetChanged()
+        uDanceRv.setLayoutManager(layoutManager)
+        val userVideoOptionAdap = UserVideoOptionAdap(requireActivity(), danceDataList)
+        uDanceRv.adapter = userVideoOptionAdap
+        userVideoOptionAdap.notifyDataSetChanged()
 
         return view
     }

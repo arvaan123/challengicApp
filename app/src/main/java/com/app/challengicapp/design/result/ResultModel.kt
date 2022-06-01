@@ -1,8 +1,8 @@
 package com.app.challengicapp.design.result
 
  data class ResultModel(
-    val iv_profile_image: Int,
-    val r_tv_person_name: String,
-    val r_tv_votes: String,
-    val r_tv_results: String
+     val ivProfileImage: Int,
+     val rTvPersonName: String,
+     val rTvVotes: String,
+     val rTvResults: String
 )

@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.SearchView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.app.challengicapp.R
@@ -26,7 +25,7 @@ class SearchFragment : Fragment() {
 
         val rvSearch = view.findViewById<RecyclerView>(R.id.rvSearch)
 
-        val searchdata = listOf(
+        val searchDataList = listOf(
             SearchModel(R.drawable.m1),
             SearchModel(R.drawable.d10),
             SearchModel(R.drawable.p3),
@@ -46,12 +45,11 @@ class SearchFragment : Fragment() {
             SearchModel(R.drawable.s4)
         )
 
-
         val gridLayoutManager =
             GridLayoutManager(requireActivity(), 3, GridLayoutManager.VERTICAL, false)
         rvSearch.layoutManager = gridLayoutManager
-        val searchadapter = SearchAdap(requireActivity(), searchdata)
-        rvSearch.adapter = searchadapter
+        val searchAdap = SearchAdap(requireActivity(), searchDataList)
+        rvSearch.adapter = searchAdap
 
         return view
     }

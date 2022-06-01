@@ -5,7 +5,7 @@
     android:layout_height="wrap_content">
 
     <RelativeLayout
-        android:id="@+id/rl_report_reason"
+        android:id="@+id/rlReportReason"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="15dp"
@@ -13,7 +13,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/tv_report_reason_list"
+            android:id="@+id/tvReportReasonList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Report"
@@ -23,7 +23,7 @@
 
 
         <ImageView
-            android:id="@+id/next_iv"
+            android:id="@+id/ivNext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -37,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#d2d2d2"
-        app:layout_constraintTop_toBottomOf="@+id/rl_report_reason" />
+        app:layout_constraintTop_toBottomOf="@+id/rlReportReason" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

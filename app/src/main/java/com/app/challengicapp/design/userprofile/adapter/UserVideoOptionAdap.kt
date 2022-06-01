@@ -1,27 +1,20 @@
-package com.app.challengicapp.design.userprofile
+package com.app.challengicapp.design.userprofile.adapter
 
-import android.app.Dialog
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.Window
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.app.challengicapp.R
-import com.app.challengicapp.design.challengic.ChallengicAdap
-import com.app.challengicapp.design.challengic.ChallengicModel
-import com.app.challengicapp.design.reportreason.ReportReasonAdap
-import com.app.challengicapp.design.reportreason.ReportReasonModel
+import com.app.challengicapp.design.userprofile.modelclass.UserVideoOptionModel
 import com.bumptech.glide.Glide
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class UserVideoOptionAdap(
     private val context: Context,
-    private val uservideoList: List<UserVideoOptionModel>
+    private val userVideoList: List<UserVideoOptionModel>
 ) :
      RecyclerView.Adapter<UserVideoOptionAdap.ViewHolder>() {
 
@@ -35,14 +28,14 @@ class UserVideoOptionAdap(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        val UserVideoOptionModel = uservideoList[position]
+        val userVideoOptionModel = userVideoList[position]
 
-        Glide.with(context).load(UserVideoOptionModel.CatImg).into(holder.ImageCategory);
-        Glide.with(context).load(UserVideoOptionModel.userIV).into(holder.userImage);
+        Glide.with(context).load(userVideoOptionModel.catImg).into(holder.ivCategory);
+        Glide.with(context).load(userVideoOptionModel.userIV).into(holder.cIvUser);
 
-        holder.tvtags.setText(UserVideoOptionModel.tvTags)
+        holder.tvtags.setText(userVideoOptionModel.tvTags)
 
-        holder.moreImage.setOnClickListener {
+        holder.imageMore.setOnClickListener {
             showBottomSheetDialog()
         }
 
@@ -57,7 +50,7 @@ class UserVideoOptionAdap(
 
 
     override fun getItemCount(): Int {
-        return uservideoList.size
+        return userVideoList.size
     }
 
     override fun getItemId(position: Int): Long {
@@ -69,11 +62,11 @@ class UserVideoOptionAdap(
     }
 
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
-        val ImageCategory: ImageView = itemView.findViewById(R.id.ImageCategory)
-        val userImage: ImageView = itemView.findViewById(R.id.userImage)
-        val tvtags: TextView = itemView.findViewById(R.id.tvtags)
+        val ivCategory: ImageView = itemView.findViewById(R.id.ivCategory)
+        val cIvUser: ImageView = itemView.findViewById(R.id.cIvUser)
+        val tvtags: TextView = itemView.findViewById(R.id.tvTags)
 
-        val moreImage: ImageView = itemView.findViewById(R.id.moreImage)
+        val imageMore: ImageView = itemView.findViewById(R.id.imageMore)
 
     }
 }

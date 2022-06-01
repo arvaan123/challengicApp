@@ -9,11 +9,10 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.app.challengicapp.R
-import com.app.challengicapp.design.challengic.ChallengicAdap
 
 class LaderboardFragment : Fragment() {
 
-    val data = listOf(
+    val laderboardDataList = listOf(
         LaderboardModel(R.drawable.u1, R.drawable.cf3, "Tina", "1367 votes", "1st"),
         LaderboardModel(R.drawable.user_profile, R.drawable.cf2, "Miller", "1298 votes", "2nd"),
         LaderboardModel(R.drawable.u2, R.drawable.cf7, "Kai", "1088 votes", "3rd"),
@@ -67,16 +66,16 @@ class LaderboardFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_laderboard, container, false)
 
-        val recyclerview = view.findViewById<RecyclerView>(R.id.laderboard_rv)
-        recyclerview.setHasFixedSize(false)
-        recyclerview.layoutManager = LinearLayoutManager(requireActivity())
+        val rvLaderboard = view.findViewById<RecyclerView>(R.id.rvLaderboard)
+        rvLaderboard.setHasFixedSize(false)
+        rvLaderboard.layoutManager = LinearLayoutManager(requireActivity())
 
-        val adapter = LaderboardAdap(requireActivity(), data)
-        recyclerview.adapter = adapter
-        adapter.notifyDataSetChanged()
+        val laderboardAdap = LaderboardAdap(requireActivity(), laderboardDataList)
+        rvLaderboard.adapter = laderboardAdap
+        laderboardAdap.notifyDataSetChanged()
 
-        val backiv = view.findViewById<ImageView>(R.id.backiv)
-        backiv.setOnClickListener {
+        val backIv = view.findViewById<ImageView>(R.id.ivUserBack)
+        backIv.setOnClickListener {
             requireActivity().finish()
         }
 

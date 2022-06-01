@@ -11,7 +11,7 @@ import com.app.challengicapp.R
 import com.app.challengicapp.design.challengic.ChallengicAdap
 import com.app.challengicapp.design.challengic.ChallengicModel
 
-class AllFragment : Fragment() { 
+class AllFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,11 +49,11 @@ class AllFragment : Fragment() {
             ChallengicModel(R.drawable.d8, R.drawable.u2, "#dancehall #talent"),
             ChallengicModel(R.drawable.d6, R.drawable.u1, "#dancersofindia #performance"),
 
-//            PostModel(
-//                R.drawable.d9,
-//                R.drawable.result_user_profile2,
-//                "#dancecover #dancephotography "
-//            ),
+/*            PostModel(
+                R.drawable.d9,
+                R.drawable.result_user_profile2,
+                "#dancecover #dancephotography "
+            ),*/
             ChallengicModel(
                 R.drawable.d10,
                 R.drawable.result_user_profile2,

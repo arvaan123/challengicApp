@@ -1,4 +1,4 @@
-package com.app.challengicapp.design.userprofile
+package com.app.challengicapp.design.userprofile.fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import com.app.challengicapp.R
-import com.app.challengicapp.design.home.HomeActivity
+import com.app.challengicapp.design.userprofile.activity.EditProfileActivity
 import com.app.challengicapp.design.userprofile.userchipgroup.UserDanceChipFragment
 import com.app.challengicapp.design.userprofile.userchipgroup.UserPopularChipFragment
 import com.app.challengicapp.design.userprofile.userchipgroup.UserSingChipFragment
@@ -31,21 +31,21 @@ class UserFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_user, container, false)
 
-        val UDanceFrag = UserDanceChipFragment()
+        val uDanceFrag = UserDanceChipFragment()
         requireActivity().supportFragmentManager.beginTransaction()
-            .replace(R.id.userChipFrag, UDanceFrag).commit()
+            .replace(R.id.userChipFrag, uDanceFrag).commit()
 
-        val iv_more = view.findViewById<ImageView>(R.id.iv_more)
-        iv_more.setOnClickListener {
+        val ivMore = view.findViewById<ImageView>(R.id.ivMore)
+        ivMore.setOnClickListener {
             showBottomSheetDialog()
         }
 
         //chip
         val danceChip = view.findViewById<Chip>(R.id.danceChip)
         danceChip.setOnClickListener {
-            val UDanceFrag = UserDanceChipFragment()
+            val uDanceFrag = UserDanceChipFragment()
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.userChipFrag, UDanceFrag).commit()
+                .replace(R.id.userChipFrag, uDanceFrag).commit()
         }
 
         val popularChip = view.findViewById<Chip>(R.id.popularChip)
@@ -64,13 +64,13 @@ class UserFragment : Fragment() {
 
         val singChip = view.findViewById<Chip>(R.id.singChip)
         singChip.setOnClickListener {
-            val SingFrag = UserSingChipFragment()
+            val singFrag = UserSingChipFragment()
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.userChipFrag, SingFrag).commit()
+                .replace(R.id.userChipFrag, singFrag).commit()
         }
 
-        val llfollowing = view.findViewById<LinearLayout>(R.id.ll_following)
-        llfollowing.setOnClickListener {
+        val llFollowing = view.findViewById<LinearLayout>(R.id.llFollowing)
+        llFollowing.setOnClickListener {
             //  startActivity(Intent(requireActivity(), UserFollowActivity::class.java))
 
             val userFrag = UserFollowFragment()
@@ -78,8 +78,8 @@ class UserFragment : Fragment() {
                 .replace(R.id.container, userFrag).addToBackStack(null).commit()
         }
 
-        val llfollowers = view.findViewById<LinearLayout>(R.id.ll_followers)
-        llfollowers.setOnClickListener {
+        val llFollowers = view.findViewById<LinearLayout>(R.id.llFollowers)
+        llFollowers.setOnClickListener {
             // startActivity(Intent(requireActivity(), UserFollowActivity::class.java))
 
             val userFrag = UserFollowFragment()
@@ -88,7 +88,7 @@ class UserFragment : Fragment() {
         }
 
 
-        val ivclose = view.findViewById<ImageView>(R.id.ivclose)
+        val ivclose = view.findViewById<ImageView>(R.id.ivClose)
         ivclose.setOnClickListener {
            // startActivity(Intent(requireActivity(), HomeActivity::class.java))
 
@@ -101,9 +101,9 @@ class UserFragment : Fragment() {
         val bottomSheetDialog = BottomSheetDialog(requireActivity())
         bottomSheetDialog.setContentView(R.layout.bottom_profile_option)
 
-        val ll_edit_profile = bottomSheetDialog.findViewById<LinearLayout>(R.id.ll_edit_profile)
+        val llEditProfile = bottomSheetDialog.findViewById<LinearLayout>(R.id.llEditProfile)
 
-        ll_edit_profile?.setOnClickListener {
+        llEditProfile?.setOnClickListener {
             startActivity(Intent(requireActivity(), EditProfileActivity::class.java))
 
         }

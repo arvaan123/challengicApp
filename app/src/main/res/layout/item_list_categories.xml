@@ -13,13 +13,14 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="15dp"
+        android:padding="@dimen/_5sdp"
         android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/categoryImage"
+        android:id="@+id/cIvCategory"
         android:layout_width="90dp"
         android:layout_height="75dp"
         app:layout_constraintStart_toStartOf="parent"

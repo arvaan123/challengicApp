@@ -9,7 +9,7 @@
     android:orientation="vertical">
 
     <RelativeLayout
-        android:id="@+id/rl_report"
+        android:id="@+id/rlReport"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="15dp"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/tv_report"
+            android:id="@+id/tvReport"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -27,7 +27,7 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/closeiv"
+            android:id="@+id/imageClose"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -40,10 +40,10 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#d2d2d2"
-        app:layout_constraintTop_toBottomOf="@+id/rl_report" />
+        app:layout_constraintTop_toBottomOf="@+id/rlReport" />
 
     <TextView
-        android:id="@+id/tv_report_reason"
+        android:id="@+id/tvReportReason"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="20dp"
@@ -54,7 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <EditText
-        android:id="@+id/et_report_msg_box"
+        android:id="@+id/etReportMsgBox"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="20dp"
@@ -65,7 +65,7 @@
         android:lines="10"
         android:padding="15dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_report_reason" />
+        app:layout_constraintTop_toBottomOf="@+id/tvReportReason" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -74,10 +74,10 @@
         android:orientation="horizontal"
         android:weightSum="2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_report_msg_box">
+        app:layout_constraintTop_toBottomOf="@+id/etReportMsgBox">
 
         <TextView
-            android:id="@+id/tv_go_back"
+            android:id="@+id/tvGoBack"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -91,7 +91,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tv_send"
+            android:id="@+id/tvSend"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"

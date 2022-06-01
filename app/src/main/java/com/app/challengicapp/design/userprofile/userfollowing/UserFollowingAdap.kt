@@ -1,4 +1,4 @@
-package com.app.challengicapp.design.laderboard
+package com.app.challengicapp.design.userprofile.userfollowing
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,48 +6,52 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.app.challengicapp.R
-import com.app.challengicapp.design.result.ResultPageFragment
+import com.app.challengicapp.design.userprofile.modelclass.UserFollowModel
 import com.bumptech.glide.Glide
 import de.hdodenhof.circleimageview.CircleImageView
 
-class LaderboardAdap(private val context: Context, private val laderboardList: List<LaderboardModel>) :
-     RecyclerView.Adapter<LaderboardAdap.ViewHolder>() {
+class UserFollowingAdap(private val context: Context, private val uFollowingList: List<UserFollowModel>) :
+     RecyclerView.Adapter<UserFollowingAdap.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.laderboard_items, parent, false)
+            .inflate(R.layout.user_following_item, parent, false)
 
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        val laderboardModel = laderboardList[position]
+        val userFollowModel = uFollowingList[position]
 
         // sets the image to the imageview from our itemHolder class
         //  holder.profile_iv.setImageResource(LaderboardModel.profile_image)
-        holder.tvPersonName.setText(laderboardModel.tvPersonName)
-        holder.tvVotes.setText(laderboardModel.tvVotes)
-        holder.tvResults.setText(laderboardModel.tvResults)
-        holder.tvResults.setOnClickListener {
+        holder.tvPersonName.setText(userFollowModel.tvPersonName)
+        holder.tvVotes.setText(userFollowModel.tvVotes)
 
-            val activity = context as AppCompatActivity
+        Glide.with(context).load(userFollowModel.userProfileImage).into(holder.ivProfile);
+        Glide.with(context).load(userFollowModel.countryImage).into(holder.ivCountry);
 
-            val resultFrag = ResultPageFragment()
-            activity.supportFragmentManager.beginTransaction()
-                .replace(R.id.container, resultFrag).addToBackStack(null).commit()
+
+        holder.tvUnFollow.setOnClickListener {
+           holder.tvFollow.setVisibility(View.VISIBLE)
+           holder.tvUnFollow.setVisibility(View.GONE)
+
         }
-        Glide.with(context).load(laderboardModel.profileImage).into(holder.ivProfile);
-        Glide.with(context).load(laderboardModel.countryIv).into(holder.ivCountry);
+
+        holder.tvFollow.setOnClickListener {
+            holder.tvUnFollow.setVisibility(View.VISIBLE)
+            holder.tvFollow.setVisibility(View.GONE)
+
+        }
 
     }
 
     // return the number of the items in the list
     override fun getItemCount(): Int {
-        return laderboardList.size
+        return uFollowingList.size
     }
 
     // Holds the views for adding it to image and text
@@ -56,7 +60,9 @@ class LaderboardAdap(private val context: Context, private val laderboardList: L
         val ivCountry: ImageView = itemView.findViewById(R.id.ivCountry)
         val tvPersonName: TextView = itemView.findViewById(R.id.tvPersonName)
         val tvVotes: TextView = itemView.findViewById(R.id.tvVotes)
-        val tvResults: TextView = itemView.findViewById(R.id.tvResults)
+        val tvUnFollow: TextView = itemView.findViewById(R.id.tvunfollow)
+        val tvFollow: TextView = itemView.findViewById(R.id.tvfollow)
 
     }
+
 }

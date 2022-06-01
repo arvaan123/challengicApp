@@ -8,10 +8,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.app.challengicapp.R
-import com.app.challengicapp.design.challengic.ChallengicAdap
-import com.app.challengicapp.design.challengic.ChallengicModel
-import com.app.challengicapp.design.userprofile.UserVideoOptionAdap
-import com.app.challengicapp.design.userprofile.UserVideoOptionModel
+import com.app.challengicapp.design.userprofile.adapter.UserVideoOptionAdap
+import com.app.challengicapp.design.userprofile.modelclass.UserVideoOptionModel
 
 class UserPopularChipFragment : Fragment() { 
 
@@ -26,8 +24,8 @@ class UserPopularChipFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_user_popular_chip, container, false)
 
-        val upopularrv = view.findViewById<RecyclerView>(R.id.upopularrv)
-        val populardatalist = listOf(
+        val uPopularRv = view.findViewById<RecyclerView>(R.id.rvUserChipPopular)
+        val popularDataList = listOf(
             UserVideoOptionModel(R.drawable.p1, R.drawable.u2, "#picture #loading"),
 
             UserVideoOptionModel(R.drawable.p2, R.drawable.u1, "#picoftheday #like #nature"),
@@ -52,10 +50,10 @@ class UserPopularChipFragment : Fragment() {
 
         val layoutManager: RecyclerView.LayoutManager =
             StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-        upopularrv.setLayoutManager(layoutManager)
-        val adapter = UserVideoOptionAdap(requireActivity(), populardatalist)
-        upopularrv.adapter = adapter
-        adapter.notifyDataSetChanged()
+        uPopularRv.setLayoutManager(layoutManager)
+        val userVideoOptionAdap = UserVideoOptionAdap(requireActivity(), popularDataList)
+        uPopularRv.adapter = userVideoOptionAdap
+        userVideoOptionAdap.notifyDataSetChanged()
 
         return view
     }
