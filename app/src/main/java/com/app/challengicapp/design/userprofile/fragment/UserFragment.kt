@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import com.app.challengicapp.R
 import com.app.challengicapp.design.userprofile.activity.EditProfileActivity
@@ -101,9 +102,9 @@ class UserFragment : Fragment() {
         val bottomSheetDialog = BottomSheetDialog(requireActivity())
         bottomSheetDialog.setContentView(R.layout.bottom_profile_option)
 
-        val llEditProfile = bottomSheetDialog.findViewById<LinearLayout>(R.id.llEditProfile)
+        val conLayEditProfile = bottomSheetDialog.findViewById<ConstraintLayout>(R.id.conLayEditProfile)
 
-        llEditProfile?.setOnClickListener {
+        conLayEditProfile?.setOnClickListener {
             startActivity(Intent(requireActivity(), EditProfileActivity::class.java))
 
         }

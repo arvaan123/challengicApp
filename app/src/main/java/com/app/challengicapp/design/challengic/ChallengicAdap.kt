@@ -66,8 +66,8 @@ class ChallengicAdap(
 
         }
 
-        val layReport = bottomSheetDialog.findViewById<LinearLayout>(R.id.layReport)
-        layReport?.setOnClickListener {
+        val tvReport = bottomSheetDialog.findViewById<TextView>(R.id.tvReport)
+        tvReport?.setOnClickListener {
             val dialog = Dialog(context)
             //  dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
             dialog.setCancelable(false)
