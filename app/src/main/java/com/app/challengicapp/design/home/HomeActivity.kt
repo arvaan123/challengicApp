@@ -9,7 +9,6 @@ import com.app.challengicapp.design.search.SearchFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 
-
 class HomeActivity : AppCompatActivity() { 
 
     lateinit var bottomNav: BottomNavigationView

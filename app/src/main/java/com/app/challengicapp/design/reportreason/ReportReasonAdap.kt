@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.app.challengicapp.R
 
@@ -28,7 +29,7 @@ class ReportReasonAdap(
         holder.tvReportReasonList.setText(reportReasonModel.tvReportReasonList)
         val sReasonText: String = holder.tvReportReasonList.getText().toString()
 
-        holder.rlReportReason.setOnClickListener {
+        holder.conLayReportReason.setOnClickListener {
 
             val dialog = Dialog(context)
             dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -59,7 +60,7 @@ class ReportReasonAdap(
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
 
         val tvReportReasonList: TextView = itemView.findViewById(R.id.tvReportReasonList)
-        val rlReportReason: RelativeLayout = itemView.findViewById(R.id.rlReportReason)
+        val conLayReportReason: ConstraintLayout = itemView.findViewById(R.id.conLayReportReason)
 
     }
 }
