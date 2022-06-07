@@ -18,8 +18,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_8sdp"
         android:textColor="@color/black"
-        android:textSize="@dimen/_12sdp"
+        android:textSize="@dimen/_14sdp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rTvVotes"
         app:layout_constraintStart_toEndOf="@+id/ivProfileImage"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,8 +30,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_8sdp"
         android:textColor="#8A8888"
-        android:textSize="@dimen/_8sdp"
+        android:textSize="@dimen/_10sdp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ivProfileImage"
         app:layout_constraintTop_toBottomOf="@id/rTvPersonName" />
 
@@ -38,12 +40,12 @@
         android:id="@+id/rTvResults"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginHorizontal="@dimen/_7sdp"
         android:textColor="@color/black"
         android:textSize="@dimen/_12sdp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/rTvVotes"
         app:layout_constraintTop_toTopOf="parent" />
 
 

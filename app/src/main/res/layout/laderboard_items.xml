@@ -35,8 +35,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_8sdp"
         android:textColor="@color/black"
-        android:textSize="@dimen/_12sdp"
+        android:textSize="@dimen/_14sdp"
         android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/tvVotes"
         app:layout_constraintStart_toEndOf="@+id/cvCountry"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_8sdp"
         android:textColor="#8A8888"
-        android:textSize="@dimen/_8sdp"
+        android:textSize="@dimen/_10sdp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/ivProfile"
         app:layout_constraintTop_toBottomOf="@id/cvCountry" />
@@ -55,12 +56,12 @@
         android:id="@+id/tvResults"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_30sdp"
         android:textColor="@color/black"
         android:textSize="@dimen/_12sdp"
         android:textStyle="bold"
+        android:layout_marginHorizontal="@dimen/_7sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/tvVotes"
         app:layout_constraintTop_toTopOf="parent" />
 
 

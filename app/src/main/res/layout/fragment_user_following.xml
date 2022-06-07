@@ -1,60 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
+    android:layout_margin="@dimen/_10sdp"
     android:orientation="vertical"
     tools:context=".design.userprofile.userfollowing.UserFollowingFragment">
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
+
+    <ImageView
+        android:id="@+id/ivUserFollowersBack"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintLeft_toRightOf="@+id/searchView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/search_bg">
+        android:layout_marginStart="@dimen/_30sdp"
+        android:background="@drawable/search_bg"
+        android:iconifiedByDefault="false"
+        android:queryBackground="@null"
+        android:queryHint="Category"
+        android:searchIcon="@drawable/ic_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/tvSearch"
+        app:layout_constraintRight_toLeftOf="@+id/ivUserFollowersBack"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <SearchView
-            android:id="@+id/searchView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:iconifiedByDefault="false"
-            android:queryBackground="@null"
-            android:queryHint="Following"
-            android:searchIcon="@drawable/ic_search">
-
-        </SearchView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerInParent="true"
-            android:padding="15dp"
-            android:text="Search"
-            android:textColor="@color/orange"
-            android:textSize="15sp"
-            android:textStyle="normal" />
-
-    </RelativeLayout>
+    </SearchView>
 
     <TextView
+        android:id="@+id/tvSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="15dp"
+        android:padding="@dimen/_10sdp"
+        android:text="Search"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/searchView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFollowing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
         android:text="Following"
         android:textColor="@color/black"
-        android:textSize="@dimen/_15sdp" />
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivUserFollowersBack" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvFollowing"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_10sdp"
         android:fadeScrollbars="false"
-        android:scrollbarSize="5dp"
+        android:scrollbarSize="@dimen/_5sdp"
         android:scrollbarThumbVertical="@drawable/scrollbar_style"
         android:scrollbarTrackVertical="@drawable/scrollbar_track_style"
-        android:scrollbars="vertical" />
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/tvFollowing" />
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

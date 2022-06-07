@@ -1,60 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="@drawable/report_msg_bg">
+    android:background="@drawable/report_msg_bg"
+    android:orientation="vertical">
 
-    <RelativeLayout
-        android:id="@+id/rlReport"
+    <TextView
+        android:id="@+id/tvReport"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="15dp"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:text="Report"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tvReport"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="Report"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:id="@+id/imageClose"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:src="@drawable/ic_close" />
-
-    </RelativeLayout>
+    <ImageView
+        android:id="@+id/imageClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
         android:background="#d2d2d2"
-        app:layout_constraintTop_toBottomOf="@+id/rlReport" />
+        app:layout_constraintTop_toBottomOf="@+id/tvReport" />
 
     <TextView
         android:id="@+id/tvReportReason"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="15dp"
+        android:padding="@dimen/_12sdp"
         android:text="Why are you reporting this post?"
         android:textColor="@color/black"
-        android:textSize="15sp"
+        android:textSize="@dimen/_12sdp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <View
         android:id="@+id/view1"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="@dimen/_1sdp"
         android:background="#d2d2d2"
         app:layout_constraintTop_toBottomOf="@+id/tvReportReason" />
 
@@ -65,5 +61,5 @@
         app:layout_constraintTop_toBottomOf="@+id/view1" />
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 

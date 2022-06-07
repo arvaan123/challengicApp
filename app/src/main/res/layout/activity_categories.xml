@@ -1,66 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/_15sdp"
-    android:orientation="vertical">
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    android:scrollbars="none">
 
-    <ImageView
-        android:id="@+id/ivCategoriesLogo"
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_60sdp"
-        android:src="@drawable/login_logo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvCategoriesHelloHeading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ivCategoriesLogo"
-        android:text="@string/hello"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_30sdp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivCategoriesLogo" />
-
-    <TextView
-        android:id="@+id/tvCategoriesHeading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvCategoriesHelloHeading"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:text="Please select your favourite categories"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_20sdp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvCategoriesHelloHeading" />
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvCategories"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/tvContinue"
-        android:layout_below="@+id/tvCategoriesHeading"
-        android:layout_marginVertical="@dimen/_10sdp"
-        android:elevation="10dp"
-        android:fadeScrollbars="false"
-        android:scrollbarSize="5dp"
-        android:scrollbarThumbVertical="@drawable/scrollbar_style"
-        android:scrollbarTrackVertical="@drawable/scrollbar_track_style"
-        android:scrollbars="vertical" />
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15sdp"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tvContinue"
-        style="@style/login_button_style"
-        android:layout_width="match_parent"
-        android:layout_alignParentBottom="true"
-        android:text="@string/btn_continue" />
+        <ImageView
+            android:id="@+id/ivCategoriesLogo"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:src="@drawable/login_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCategoriesHelloHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivCategoriesLogo"
+            android:text="@string/hello"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_30sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivCategoriesLogo" />
+
+        <TextView
+            android:id="@+id/tvCategoriesHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvCategoriesHelloHeading"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Please select your favourite categories"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCategoriesHelloHeading" />
 
 
-</RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCategories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:elevation="10dp"
+            android:fadeScrollbars="false"
+            android:scrollbarSize="5dp"
+            android:scrollbarThumbVertical="@drawable/scrollbar_style"
+            android:scrollbarTrackVertical="@drawable/scrollbar_track_style"
+            android:scrollbars="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/tvCategoriesHeading" />
+
+        <TextView
+            android:id="@+id/tvContinue"
+            style="@style/login_button_style"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:text="@string/btn_continue"
+            app:layout_constraintTop_toBottomOf="@+id/rvCategories" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
