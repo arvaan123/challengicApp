@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <SearchView
+    <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,14 +25,15 @@
         android:background="@drawable/search_bg"
         android:iconifiedByDefault="false"
         android:queryBackground="@null"
-        android:queryHint="Latest Trend"
-        android:searchIcon="@drawable/ic_search"
+        app:queryHint="Latest Trend"
+        app:closeIcon="@null"
+        app:searchIcon="@drawable/ic_search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/tvSearch"
         app:layout_constraintRight_toLeftOf="@+id/ivUserFollowersBack"
         app:layout_constraintTop_toTopOf="parent">
 
-    </SearchView>
+    </androidx.appcompat.widget.SearchView>
 
     <TextView
         android:id="@+id/tvSearch"
