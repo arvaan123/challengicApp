@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation"
+    app:startDestination="@+id/laderboard">
+
+    <fragment
+        android:id="@+id/laderboard"
+        android:name="com.app.challengicapp.design.laderboard.LaderboardFragment"
+        tools:layout="@layout/fragment_laderboard">
+
+        <action
+            android:id="@+id/action_laderboard_to_resultFragment"
+            app:destination="@id/resultFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.app.challengicapp.design.result.ResultPageFragment"
+        tools:layout="@layout/fragment_result_page" />
+
+
+    <fragment
+        android:id="@+id/challengic"
+        android:name="com.app.challengicapp.design.challengic.ChallengicFragment"
+        tools:layout="@layout/fragment_challengic">
+        <action
+            android:id="@+id/action_challengic_to_userFragment"
+            app:destination="@id/userFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.app.challengicapp.design.userprofile.fragment.UserFragment"
+        tools:layout="@layout/fragment_user" >
+        <action
+            android:id="@+id/action_userFragment_to_userFollowFrag"
+            app:destination="@id/userFollowFrag" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userFollowFrag"
+        android:name="com.app.challengicapp.design.userprofile.fragment.UserFollowFragment"
+        tools:layout="@layout/fragment_user_follow" />
+
+    <fragment
+        android:id="@+id/search"
+        android:name="com.app.challengicapp.design.search.SearchFragment"
+        tools:layout="@layout/fragment_search" />
+
+</navigation>

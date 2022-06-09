@@ -7,6 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import com.app.challengicapp.R
 import com.app.challengicapp.design.challengic.challengicchipgroup.*
 import com.app.challengicapp.design.notification.NotificationActivity
@@ -79,12 +82,18 @@ class ChallengicFragment : Fragment() {
         requireActivity().supportFragmentManager.beginTransaction()
             .replace(R.id.chipFrag, DanceFrag).commit()
 
-
         val userIv = view.findViewById<ImageView>(R.id.cIvUserProfile)
         userIv.setOnClickListener {
-            val userFrag = UserFragment()
+           /* val userFrag = UserFragment()
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.container, userFrag).addToBackStack(null).commit()
+                .replace(R.id.container, userFrag).addToBackStack(null).commit()*/
+
+            findNavController().navigate(R.id.action_challengic_to_userFragment);
+
+          /*  val navHostFragment =
+                requireActivity().supportFragmentManager.findFragmentById(R.id.container) as NavHostFragment
+            val navController = navHostFragment.navController*/
+
 
         }
 
@@ -96,6 +105,7 @@ class ChallengicFragment : Fragment() {
         return view
 
     }
+
 
 
     override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {

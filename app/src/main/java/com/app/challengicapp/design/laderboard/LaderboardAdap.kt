@@ -7,14 +7,20 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.findNavController
+
 import androidx.recyclerview.widget.RecyclerView
 import com.app.challengicapp.R
 import com.app.challengicapp.design.result.ResultPageFragment
 import com.bumptech.glide.Glide
 import de.hdodenhof.circleimageview.CircleImageView
 
-class LaderboardAdap(private val context: Context, private val laderboardList: List<LaderboardModel>) :
-     RecyclerView.Adapter<LaderboardAdap.ViewHolder>() {
+class LaderboardAdap(
+    private val context: Context,
+    private val laderboardList: List<LaderboardModel>,
+    val nevigateToResultFragmentListener: () -> Unit
+) :
+    RecyclerView.Adapter<LaderboardAdap.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -32,22 +38,20 @@ class LaderboardAdap(private val context: Context, private val laderboardList: L
         holder.tvPersonName.setText(laderboardModel.tvPersonName)
         holder.tvVotes.setText(laderboardModel.tvVotes)
         holder.tvResults.setText(laderboardModel.tvResults)
-        holder.tvResults.setOnClickListener {
 
-            val activity = context as AppCompatActivity
-
-            val resultFrag = ResultPageFragment()
-            activity.supportFragmentManager.beginTransaction()
-                .replace(R.id.container, resultFrag).addToBackStack(null).commit()
+        holder.itemView.rootView.setOnClickListener {
+            nevigateToResultFragmentListener.invoke()
         }
+
         Glide.with(context).load(laderboardModel.profileImage).into(holder.ivProfile);
         Glide.with(context).load(laderboardModel.countryIv).into(holder.ivCountry);
+
 
     }
 
     // return the number of the items in the list
     override fun getItemCount(): Int {
-        return laderboardList.size
+        return 10
     }
 
     // Holds the views for adding it to image and text

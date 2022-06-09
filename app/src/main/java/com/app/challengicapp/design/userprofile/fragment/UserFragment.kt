@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.app.challengicapp.R
 import com.app.challengicapp.design.userprofile.activity.EditProfileActivity
 import com.app.challengicapp.design.userprofile.userchipgroup.UserDanceChipFragment
@@ -72,19 +73,13 @@ class UserFragment : Fragment() {
         val conLayFollowing = view.findViewById<ConstraintLayout>(R.id.conLayFollowing)
         conLayFollowing.setOnClickListener {
             //  startActivity(Intent(requireActivity(), UserFollowActivity::class.java))
-
-            val userFrag = UserFollowFragment()
-            requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.container, userFrag).addToBackStack(null).commit()
+            findNavController().navigate(R.id.action_userFragment_to_userFollowFrag);
         }
 
         val conLayFollowers = view.findViewById<ConstraintLayout>(R.id.conLayFollowers)
         conLayFollowers.setOnClickListener {
             // startActivity(Intent(requireActivity(), UserFollowActivity::class.java))
-
-            val userFrag = UserFollowFragment()
-            requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.container, userFrag).addToBackStack(null).commit()
+            findNavController().navigate(R.id.action_userFragment_to_userFollowFrag);
         }
 
 

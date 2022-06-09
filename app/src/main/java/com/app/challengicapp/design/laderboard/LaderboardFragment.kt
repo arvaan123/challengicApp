@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.app.challengicapp.R
@@ -70,7 +71,7 @@ class LaderboardFragment : Fragment() {
         rvLaderboard.setHasFixedSize(false)
         rvLaderboard.layoutManager = LinearLayoutManager(requireActivity())
 
-        val laderboardAdap = LaderboardAdap(requireActivity(), laderboardDataList)
+        val laderboardAdap = LaderboardAdap(requireActivity(), laderboardDataList,nevigateToResultFragmentListener)
         rvLaderboard.adapter = laderboardAdap
         laderboardAdap.notifyDataSetChanged()
 
@@ -80,6 +81,11 @@ class LaderboardFragment : Fragment() {
         }
 
         return view
+    }
+
+    val nevigateToResultFragmentListener = fun(){
+        findNavController().navigate(R.id.action_laderboard_to_resultFragment);
+
     }
 
 }

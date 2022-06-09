@@ -46,28 +46,38 @@
             app:layout_constraintTop_toTopOf="@id/cIvDualNotificationOne"
             tools:src="@tools:sample/avatars" />
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvNotificationDescription"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conLayoutNotification"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/notification_msg"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:textSize="@dimen/_12sdp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="match_parent"
         app:layout_constraintStart_toEndOf="@id/cIvNotification"
-        app:layout_constraintTop_toTopOf="@id/cIvNotification" />
+        app:layout_constraintTop_toTopOf="@id/cIvNotification">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_3sdp"
-        android:text="@string/notification_time"
-        android:textSize="@dimen/_10sdp"
-        app:layout_constraintStart_toStartOf="@id/tvNotificationDescription"
-        app:layout_constraintTop_toBottomOf="@id/tvNotificationDescription" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNotificationDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/notification_msg"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:text="@string/notification_time"
+            android:textColor="#8A8888"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/tvNotificationDescription"
+            app:layout_constraintTop_toBottomOf="@id/tvNotificationDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
